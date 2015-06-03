@@ -1,0 +1,15 @@
+system("ls")
+system("hello")
+system("echo")
+system("ls1")
+system("jmeter1")
+$?.exitstatus
+system("cd")
+bye
+exit
+system "command -v foo >/dev/null 2>&1 || { echo >&2 \"I require foo but it's not installed.  Aborting.\"; exit 1; }"
+system "command -v foo >/dev/null 2>&1"
+system "command -v jmeter >/dev/null 2>&1"
+system "command -v ls >/dev/null 2>&1"
+system "command -v hello >/dev/null 2>&1"
+system "command -v echo >/dev/null 2>&1"

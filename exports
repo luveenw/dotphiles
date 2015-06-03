@@ -1,0 +1,57 @@
+# Make vim the default editor
+export EDITOR="vim"
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:history:exit:date:* --help"
+
+# Prefer US English and use UTF-8
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Make Homebrew Maven available via shell variables
+M2_HOME=/usr/local/Cellar/maven/3.0.5/libexec
+M2=/usr/local/Cellar/maven/3.0.5/libexec/bin
+
+# Ensure Mysql executable is in PATH
+export PATH=~/.rvm/gems/ruby-1.9.2-p320/bin:/usr/local/mysql/bin:/Applications/Xcode.app/Contents/Developer/usr/subversion-1.6/bin:$SAVANA_HOME/bin:/usr/local/bin:/Users/luveen.wadhwani/Downloads/android-sdk-macosx/tools:$PATH
+#:/Users/luveen.wadhwani/Downloads/apache-jmeter-2.10/bin
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# Opower-specific
+export workspace=/code
+export POSE_USER=luveen.wadhwani
+export MYSQL_PASSWORD=raeghave
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m"
+export TERM=vt100
+export LD_LIBRARY_PATH=/Applications/YourKit_Java_Profiler_2013_build_13074.app/bin/mac
+export LD_LIBRARY_PATH=/Applications/YourKit_Java_Profiler_2013_build_13074.app/bin/mac
+
+# Savana
+export SAVANA_HOME=/tools/savana-1.2
+
+# DON'T Prettify terminal
+# export CLICOLOR=0
+# export LSCOLORS=
+# export LS_COLORS=
+export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+
+# Haxe
+export HAXEPATH=/usr/lib/haxe
+export HAXE_LIBRARY_PATH=/usr/lib/haxe/std
+export NEKOPATH=/usr/lib/neko

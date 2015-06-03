@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnyConnectPreferences>
+<DefaultUser>luveen.wadhwani</DefaultUser>
+<DefaultSecondUser></DefaultSecondUser>
+<ClientCertificateThumbprint>AFECA4B3A2EE8D932754185C9727E23AAB4E24BC</ClientCertificateThumbprint>
+<ServerCertificateThumbprint></ServerCertificateThumbprint>
+<DefaultHostName>US-WEST (1)</DefaultHostName>
+<DefaultHostAddress></DefaultHostAddress>
+<DefaultGroup>Opower-AD</DefaultGroup>
+<ProxyHost></ProxyHost>
+<ProxyPort></ProxyPort>
+<SDITokenType>none</SDITokenType>
+<ControllablePreferences>
+<AutoConnectOnStart>true</AutoConnectOnStart>
+<LocalLanAccess>false</LocalLanAccess></ControllablePreferences>
+</AnyConnectPreferences>

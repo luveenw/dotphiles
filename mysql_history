@@ -1,0 +1,597 @@
+_HiStOrY_V2_
+drop\040database\040poseur;
+drop\040database\040poseur_test;
+drop\040database\040poseur_test;
+drop\040database\040poseur_client_test;
+drop\040database\040poseur_import_test;
+drop\040database\040batch;
+drop\040database\040if\040exists\040batch_test;
+drop\040database\040if\040exists\040location;
+drop\040database\040if\040exists\040location_test;
+show databases;
+create user 'poseur'@'localhost' identified by 'poseur';
+grant all on *.* to 'poseur'@'localhost' with grant option;
+use poseur_test;
+select * from utility_company;
+show tables;
+select * from site;
+drop database site_attribute_test;
+use site_attribute_test;
+show databases;
+use poseur_test
+select * from site_parcel;
+show databases;
+use poseur_test
+select * from site_parcel;
+show tables;
+select * from patches;
+select * from patches where in_progress = `T`;
+select * from patches where patch_in_progress = `T`;
+select * from patches where patch_in_progress = "T";
+update patches set patch_in_progress = 'F' where patch_in_progress = 'T';
+use poseur_test
+show tables;
+select * from site_parcel;
+show create table site_parcel;
+select * from site_parcel where id = 1;
+select * from site_parcel where site_id = 1;
+select * from site_parcel where site_id = 1 \g;
+select * from site_parcel where site_id = 1 \g
+select * from site_parcel where site_id = 1 \g;
+select * from site_parcel where site_id = 1 /g;
+select * from site_parcel where site_id = 1 
+;
+select * from site_parcel where site_id = 1 /G
+;
+select * from site_parcel where site_id = 1 \G;
+select * from site_parcel\G;
+select * from site_parcel \G;
+select * from site_parcel \G
+show create table site_parcel;
+select * from utility_company \G
+use poseur_test
+select * from utility_company;
+show databases;
+use site_attribute;
+show tables;
+use site_attribute_test;
+show tables;
+use poseur;
+show create table site_parcel;
+use poseur_test
+show create table site_parcel;
+show create table site;
+show create table site_multitenant_id;
+show create table site_parcel;
+show create table site;
+show create table site_parcel;
+show create table site_multitenant_id
+;
+show tables;
+show databases;
+use site_attribute_test
+show tables;
+use site_attribute
+show tables;
+select * from attribute_metadata;
+use site_attribute_test
+select * from attribute_metadata;
+use poseur_test
+select * from utility_company;
+use site_attribute_test;
+select * from entity_attribute;
+select * from attribute_metadata;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+use poseur_test
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+use poseur_test -A
+show create table site_parcel;
+show tables;
+select * from utility_company;
+select * from site_parcel;
+use site_attribute;
+show tables;
+select * from site_parcel limit 3;
+select * from utility_company;
+use site_attribute;
+show tables;
+show create table site_parcel;
+show tables;
+select * from sync_high_watermarks;
+select count(*) from entity_attribute;
+select * from entity_attributes;
+select * from entity_attribute;
+select unhex(entity_uuid) from entity_attribute;
+use zok1_report;
+select * from site_multitenant_id;
+select * from site;
+select s.id, smi.multitenant_id from site s join site_multitenant_id smi on smi.site_id = s.id;
+select s.id, unhex(smi.multitenant_id) from site s join site_multitenant_id smi on smi.site_id = s.id;
+select s.id, hex(smi.multitenant_id) from site s join site_multitenant_id smi on smi.site_id = s.id;
+use site_attribute;
+select hex(entity_uuid) from entity_attribute;
+use zok1_report;
+select * from site_multitenant_id where hex(multitenant_id) = 'ACED00057372000E6A6176612E757469'
+;
+select * from site_multitenant_id where multitenant_id = unhex('ACED00057372000E6A6176612E757469');
+select hex(multitenant_id) from site_multitenant_id;
+delete from sync_high_watermarks;
+use site_attribute;
+delete from sync_high_watermarks;
+delete from entity_attribute;
+show tablesl
+;
+show tables;
+select * from entity_attribute;
+select hex(entity_uuid) from entity_attribute;
+delete from sync_high_watermarks;
+delete from entity_attribute;
+delete from sync_high_watermarks;
+select * from entity_attribute;
+show tables;
+show databases;
+use site_attribute;
+show tables;
+create database if not exists site_attribute;
+grant all on site_attribute.* to 'site_attribute_root'@'10.%.%.%' identified by "FQfwpbhE";
+grant process on *.* to 'site_attribute_root'@'10.%.%.%';
+grant INSERT, SELECT, UPDATE, DELETE on site_attribute.* to 'site_attribute_write'@'10.%.%.%' identified by "d0LpB9Uh";
+grant SELECT on site_attribute.* to 'site_attribute_read'@'10.%.%.%' identified by "3I9q1Az2";
+grant all on site_attribute.* to 'site_attrib_root'@'10.%.%.%' identified by "FQfwpbhE";
+grant process on *.* to 'site_attrib_root'@'10.%.%.%';
+grant INSERT, SELECT, UPDATE, DELETE on site_attribute.* to 'site_attrib_writ'@'10.%.%.%' identified by "d0LpB9Uh";
+grant SELECT on site_attribute.* to 'site_attrib_read'@'10.%.%.%' identified by "3I9q1Az2";
+show tables;
+select count(*) from sync_high_watermarks;
+select * from sync_high_watermarks;
+delete from sync_high_watermarks where utility_code like 'CLPP';
+delete from entity_attribute where utility_code like 'CLPP';
+select * from attribute_source;
+select count(*) from entity_attribute;
+delete from entity_attribute;
+delete from sync_high_watermark;
+delete from sync_high_watermarks;
+use batch;
+show tables;
+select * from BATCH_JOB_EXECUTION limit 1;
+select * from BATCH_JOB_EXECUTION where STATUS like 'IN_PROGRESS';
+select * from BATCH_JOB_EXECUTION where STATUS like 'RUNNING';
+select * from BATCH_JOB_EXECUTION;
+select * from BATCH_JOB_INSTANCE;
+select * from BATCH_JOB_EXECUTION where END_TIME IS NULL;
+delete from BATCH_JOB_EXECUTION where END_TIME IS NULL;
+update BATCH_JOB_EXECUTION set END_TIME = now() where END_TIME IS NULL;
+use site_attribute;
+select count(*) from entity_attribute;
+delete from sync_high_watermarks;
+use batch;
+update BATCH_JOB_EXECUTION set END_TIME = now() where END_TIME IS NULL;
+use site_attribute;
+delete from sync_high_watermarks;
+use batch;
+update BATCH_JOB_EXECUTION set END_TIME = now() where END_TIME IS NULL;
+use site_attribute;
+select count(*) from entity_attribute;
+show full processlist;
+show processlist;
+select count(*) from entity_attribute;
+show create table attribute_metadata;
+show create table attribute_metadata_integer;
+select m.attribute_key, m.attribute_type, m.in_use, i.lower_bound, i.upper_bound  
+from attribute_metadata m  
+left join attribute_metadata_integer i on m.attribute_key = i.attribute_key  
+where m.attribute_key = 'living_area_square_footage';
+select m.attribute_key, m.attribute_type, m.in_use, i.lower_bound, i.upper_bound   from attribute_metadata m   left join attribute_metadata_integer i on m.attribute_key = i.attribute_key   where m.attribute_key = 'living_area_square_footage';
+explain select m.attribute_key, m.attribute_type, m.in_use, i.lower_bound, i.upper_bound   from attribute_metadata m   left join attribute_metadata_integer i on m.attribute_key = i.attribute_key   where m.attribute_key = 'living_area_square_footage';
+select count(*) from entity_attribute;
+select count(*) from entity_attribute where utility_code like 'CLPP';
+desc entity_attribute;
+select updated_at from entity_attribute limit 100 order by 1 desc;
+select updated_at from entity_attribute order by 1 desc limit 100;
+select updated_at from entity_attribute order by 1 desc limit 150;
+select updated_at from entity_attribute order by 1 desc limit 200;
+select count(*) from entity_attribute where utility_code like 'CLPP';
+show tables;
+select count(*) from daily_summary;
+select * from daily_summary limit 1;
+select * from weather limit 1;
+select * from daily_summary limit 1;
+select * from station limit 3;
+select min(latitude), longitude from station;
+select min(latitude), longitude from station group by 1;
+select s.code, count(d.*) from station s join daily_summary d on s.code = d.station_code order by 2 desc group by 1 limit 10;
+select s.code, count(*) from station s join daily_summary d on s.code = d.station_code order by 2 desc group by 1 limit 10;
+select s.code, count(*) from station s join daily_summary d on s.code = d.station_code group by 1 order by 2 desc limit 10;
+select s.code, count(*) from station s join daily_summary d on s.code = d.station group by 1 order by 2 desc limit 10;
+select s.code, count(*) from station s left join daily_summary d on s.code = d.station group by 1 order by 2 desc limit 10;
+select d.* from station s join weather w on w.station = s.code where code like 'ICAO_AGIN';
+select w.* from station s join weather w on w.station = s.code where code like 'ICAO_AGIN';
+select count(w.*) from station s join weather w on w.station = s.code where code like 'ICAO_AGIN';
+select s.code, count(*) from station s join weather w on w.station = s.code where code like 'ICAO_AGIN';
+select s.code, count(*) from station s join weather w on w.station = s.code where code like 'ICAO_AGIN' and s.latitude = 38.946667 and s.longitude = 38.711388;
+select s.code, w.* station s join weather w on w.station = s.code where code like 'ICAO_AGIN' and s.latitude = 38.946667 and s.longitude = 38.711388;
+select s.code, w.* from station s join weather w on w.station = s.code where code like 'ICAO_AGIN' and s.latitude = 38.946667 and s.longitude = 38.711388;
+drop database site_attribute
+;
+drop database site_attribute_test;
+show create table entity_attribute;
+show create table entity_attributes;
+show tables;
+use site_attribute;
+show create table entity_attribute;
+show create table entity_attributes;
+show tables;
+show create table entity_attribute_test;
+use site_attribute_test;
+show create table entity_attribute;
+show tables;
+select entity_uuid, utility_code, created_at, updated_at from entity_attribute;
+select entity_uuid, utility_code, created_at, updated_at from entity_attribute \G
+use poseur_test
+select * from site;
+select * from utility_company;
+show create table site_parcel;
+select * from utility_company;
+delete from utility_company;
+delete from site;
+delete from site_multitenant_id;
+delete from site;
+truncate table site_parcel_audit;
+truncate table site_parcel;
+truncate table site_multitenant_id;
+truncate table site;
+truncate table utility_company;
+select * from entity_attribute_metadata;
+show tables;
+select * from attribute_metadata;
+select * from attribute_source;
+show tables;
+select * from entity_attribute;
+truncate table entity_attribute;
+use zok1_report;
+show tables;
+select * from entity_attribute;
+show tables;
+select * from patches where patch_in_progress = true;
+select * from patches where patch_in_progress = T;
+select * from patches where patch_in_progress = false;
+select * from patches;
+use poseur_test;
+select * from patches;
+show databases;
+use batch_test
+select * from patches;
+update patches set patch_in_progress = F where patch_in_progress = T;
+update patches set patch_in_progress = false where patch_in_progress = true;
+update patches set patch_in_progress = F where patch_in_progress = true;
+update patches set patch_in_progress = 'F' where patch_in_progress = true;
+update patches set patch_in_progress = 0 where patch_in_progress = true;
+update patches set patch_in_progress = 0 where patch_in_progress = 1;
+update patches set patch_in_progress = 0;
+select * from patches;
+update patches set patch_in_progress = F;
+update patches set patch_in_progress = false;
+select * from patches;
+desc patches;
+update patches set patch_in_progress = 'F';
+desc patches;
+select * from patches;
+show databases;
+use customer_attribu_test
+select * from customer_home_characteristics;
+select * from customer_home_characteristic;
+use poseur_test
+select * from customer_home_characteristics;
+select * from customer_multitenant_id;
+select hex(multitenant_id) from customer_multitenant_id;
+use poseur
+desc customer_home_characteristics;
+use poseur_test
+desc customer_home_characteristics;
+use customer_attribu_test;
+show tables;
+select * from attribute_metadata;
+delete from attribute_metadata;
+use poseur
+drop database customer_attribu_test;
+show databases;
+use customer_attribu_test
+select * from patches;
+update patches set patch_in_progress = 'F';
+select * from patches;
+update patches set patch_in_progress = 'F';
+select * from patches;
+use bertha;
+use batch;
+select * from patches;
+show databases;
+use batch_test;2A
+select * from patches;
+update patches set patch_in_progress = 'F';
+select * from patches;
+show tables;
+select * from sync_high_watermarks;
+use batch
+use batch;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid
+;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid
+use batch;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid
+;
+use batch;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid;
+desc customer;
+desc utility_company;
+use poseur_test;
+select * from site;
+select * from utility_code;
+select * from utility_company;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id WHERE (chc.changed_on <= :upperBoundUpdatedAt) and ((chc.changed_on > :latestReportEntityUpdatedAt) or ((chc.changed_on = :latestReportEntityUpdatedAt) and (cmi.customer_id > :latestReportEntityId))) ORDER BY changed_on, cmi.customer_id  ASC LIMIT 2;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id WHERE (chc.changed_on <= '2014-02-01 00:00:00') and ((chc.changed_on > '2014-01-01 00:00:00') or ((chc.changed_on = '2014-01-31 00:00:00') and (cmi.customer_id > :latestReportEntityId))) ORDER BY changed_on, cmi.customer_id  ASC LIMIT 2
+;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id WHERE (chc.changed_on <= '2014-02-01 00:00:00') and ((chc.changed_on > '2014-01-01 00:00:00') or ((chc.changed_on = '2014-01-31 00:00:00') and (cmi.customer_id > 1))) ORDER BY changed_on, cmi.customer_id  ASC LIMIT 2;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id;
+select home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_home_characteristics;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id WHERE (chc.changed_on <= '2014-02-01 00:00:00') and ((chc.changed_on > '2014-01-01 00:00:00') or ((chc.changed_on = '2014-01-31 00:00:00') and (cmi.customer_id > 1))) ORDER BY changed_on, cmi.customer_id  ASC LIMIT 2;
+SELECT   cmi.customer_id, cmi.multitenant_id,   home_thermostat_when_cold, away_thermostat_when_cold, asleep_thermostat_when_cold,   home_thermostat_when_hot,  away_thermostat_when_hot,  asleep_thermostat_when_hot,   efficient_lighting,        outdoor_lighting,          drafty_exterior_doors,   drafty_windows,            window_condensation,       static_electricity,   rooms_with_sun,            pool_covered,              scalding_water,   washing_machine,           dryer,                     second_fridge,   mini_fridge,               standalone_freezer,        desktop_computer,   television,                dvd_player,                game_console,   user_id,                   source,                    changed_on FROM customer_multitenant_id cmi join customer_home_characteristics chc on cmi.customer_id = chc.customer_id WHERE (chc.changed_on <= '2014-01-31 16:00:00') and ((chc.changed_on > '2013-12-31 16:00:00') or ((chc.changed_on = '2013-12-31 16:00:00') and (cmi.customer_id > 1))) ORDER BY changed_on, cmi.customer_id  ASC LIMIT 2
+;
+select * from customer;
+delete from customer;
+delete from customer_demographics;
+delete from customer;
+delete from customer_demographics;
+delete from customer;
+select * from site_parcel;
+OB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid;
+use batch_test;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid;
+select * from patches;
+update patches set patch_in_progress = 'F';
+use batch_test;
+use batch;
+select @jid := JOB_EXECUTION_ID, @st := START_TIME from BATCH_JOB_EXECUTION where END_TIME is null;
+update BATCH_JOB_EXECUTION set END_TIME = date_add(@st,interval 1 second) where JOB_EXECUTION_ID = @jid;
+use site_attribute;
+select * from sync_high_watermarks;
+delete from entity_attributes;
+delete from entity_attribute;
+delete from sync_high_watermarks;
+use site_attribute;
+select * from entity_attribute;
+select * from sync_high_watermark;
+select * from sync_high_watermarks;
+use site_attribute_test;
+select * from sync_high_watermarks;
+select * from entity_attribute;
+drop database customer_attribu_test;
+use site_attribute_test;
+select * from entity_attribute;
+select * from sync_high_watermarks;
+select * from patches;
+update patches set patch_in_progress = 'F';
+select * from patches;
+update patches set patch_in_progress = 'F';
+show databases;
+drop customer_attribu_test;
+drop database customer_attribu_test;
+drop database site_attribute_test;
+use customer_attribu_test;
+select * from attribute_metadata_integer;
+select * from attribute_metadata;
+drop database site_attribute_test;
+drop database customer_attribu_test;
+use site_attribute_test;
+-- SA-988 Fix metadata for home thermostat attributes
+REPLACE INTO `attribute_metadata` (`attribute_key`, `attribute_type`, `created_at`)
+VALUES
+('home_thermostat_when_cold', 'INTEGER', now()),
+('home_thermostat_when_hot', 'INTEGER', now());
+REPLACE INTO `attribute_metadata` (`attribute_key`, `attribute_type`, `created_at`) VALUES ('home_thermostat_when_cold', 'INTEGER', now()), ('home_thermostat_when_hot', 'INTEGER', now());
+REPLACE INTO `attribute_metadata_integer` (`attribute_key`, `lower_bound`, `upper_bound`, `created_at`)
+VALUES
+  ('home_thermostat_when_cold', 0, 255, now()),
+('home_thermostat_when_hot', 0, 255, now());
+REPLACE INTO `attribute_metadata_integer` (`attribute_key`, `lower_bound`, `upper_bound`, `created_at`) VALUES   ('home_thermostat_when_cold', 0, 255, now()), ('home_thermostat_when_hot', 0, 255, now());
+show tables;
+select * from entity_attribute limit 1;
+use customer_attribu;
+select * from entity_attribute limit 1;
+use site_attribute;
+select * from entity_attribute limit 1;
+use site_attribute_test;
+select * from entity_attribute limit 1;
+select count(*) from entity_attribute;
+select * from entity_attribute;
+select count(*) from entity_attribute;
+use zok1_report;
+select count(*) from customer_home_characteristics;
+use site_attribute;
+select count(*) from entity_attribute;
+use zok1_report;
+selelct count(*) from site_parcel;
+select count(*) from site_parcel;
+use site_attribute;
+select count(*) from entity_attribute;
+use zok1_report;
+show create table site_parcel;
+rename site_parcel to site_parcel_zok1_backup;
+rename table site_parcel to site_parcel_zok1_backup;
+show create table site_parcel;
+CREATE TABLE `site_parcel` (
+  `site_id` int(10) unsigned NOT NULL,
+  `parcel_unique_id` varchar(40) DEFAULT NULL,
+  `owner_name` varchar(250) DEFAULT NULL,
+  `parcel_sqft` mediumint(8) unsigned DEFAULT NULL,
+  `living_sqft` mediumint(8) unsigned DEFAULT NULL,
+  `garage_sqft` mediumint(8) unsigned DEFAULT NULL,
+  `basement_sqft` mediumint(8) unsigned DEFAULT NULL,
+  `number_of_rooms` smallint(5) unsigned DEFAULT NULL,
+  `bedrooms` tinyint(3) unsigned DEFAULT NULL,
+  `bathrooms` float DEFAULT NULL,
+  `fireplaces` tinyint(3) unsigned DEFAULT NULL,
+  `assessed_value` int(10) unsigned DEFAULT NULL,
+  `land_value` int(10) unsigned DEFAULT NULL,
+  `structure_value` int(10) unsigned DEFAULT NULL,
+  `year_built` smallint(5) unsigned DEFAULT NULL,
+  `absentee_owner` tinyint(1) DEFAULT NULL,
+  `generates_power` tinyint(1) DEFAULT NULL,
+  `last_sale_value` int(10) unsigned DEFAULT NULL,
+  `ac_type` enum('CENTRAL','NONE','UNIT','WINDOW','UNKNOWN_TYPE','INFERRED_NONE','FAN','CENTRAL_EVAPORATIVE','CENTRAL_HEAT_PUMP','ROOM_HEAT_PUMP','ROOM_PORTABLE','OTHER','CENTRAL_UNKNOWN') DEFAULT NULL,
+  `ac_age` enum('LESS_THAN_TEN_YEARS','MORE_THAN_TEN_YEARS') DEFAULT NULL,
+  `dwelling_condition` enum('ABOVE_AVERAGE','AVERAGE','BELOW_AVERAGE','NONE','OTHER','UNDER_CONSTRUCTION') DEFAULT NULL,
+  `construction_material` enum('MASONRY','NONE','OTHER','WOOD') DEFAULT NULL,
+  `basement_type` enum('FINISHED','NONE','OTHER','PARKING','PARTIALLY_FINISHED','UNFINISHED') DEFAULT NULL,
+  `foundation_type` enum('EARTH','MASONRY','NONE','OTHER','SLAB','WOOD') DEFAULT NULL,
+  `garage` tinyint(3) unsigned DEFAULT NULL,
+  `number_of_floors` tinyint(3) unsigned DEFAULT NULL,
+  `dwelling_quality` enum('AVERAGE','BELOW_AVERAGE','ECONOMICAL','EXCELLENT','FAIR','GOOD','LOW','LUXURY','NONE','OTHER','POOR') DEFAULT NULL,
+  `heat_type` enum('ELEC','GAS','NONE','OTHER','LPG','OIL','WOOD','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,
+  `dwelling_type` enum('MULT','NON_RESIDENTIAL','SING') NOT NULL DEFAULT 'SING',
+  `pool` enum('NONE','POOL') DEFAULT NULL,
+  `pool_sqft` mediumint(8) unsigned DEFAULT NULL COMMENT 'The size of the swimming pool in square feet',
+  `pool_heat_type` enum('ELEC','GAS','SOLAR','OTHER','NONE','LPG','OIL') DEFAULT NULL,
+  `spa` enum('NONE','SPA','SAUNA') DEFAULT NULL,
+  `water_heat_type` enum('ELEC','GAS','SOLAR','OTHER','LPG','OIL','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,
+  `heat_mech` enum('BASEBOARD','CENTRAL','FORCED_AIR','FURNACE','HEAT_PUMP','NONE','OTHER','RADIATOR','STORAGE','PORTABLE','RADIANT','WOOD_BURNER','ROOM_HEAT_PUMP') DEFAULT NULL,
+  `heat_age` enum('LESS_THAN_TWENTY_YEARS','MORE_THAN_TWENTY_YEARS') DEFAULT NULL,
+  `voltage_class` enum('PRIMARY','SECONDARY','TRANSMISSION') DEFAULT NULL,
+  `elec_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,
+  `gas_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,
+  `amperage` float DEFAULT NULL COMMENT 'Amperage rating for a site, the unit is ampere (A)',
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `source` enum('WEB','CSR','PE','API','INFERRED','SERVICE') DEFAULT NULL COMMENT 'The actor that last made a change to this row',
+  `changed_on` datetime DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`site_id`),
+  KEY `site_parcel_user_fk` (`user_id`),
+  KEY `site_parcel_updated_at_ix` (`updated_at`),
+  CONSTRAINT `site_parcel_site_fk` FOREIGN KEY (`site_id`) REFERENCES `site` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+;
+CREATE TABLE `site_parcel` (   `site_id` int(10) unsigned NOT NULL,   `parcel_unique_id` varchar(40) DEFAULT NULL,   `owner_name` varchar(250) DEFAULT NULL,   `parcel_sqft` mediumint(8) unsigned DEFAULT NULL,   `living_sqft` mediumint(8) unsigned DEFAULT NULL,   `garage_sqft` mediumint(8) unsigned DEFAULT NULL,   `basement_sqft` mediumint(8) unsigned DEFAULT NULL,   `number_of_rooms` smallint(5) unsigned DEFAULT NULL,   `bedrooms` tinyint(3) unsigned DEFAULT NULL,   `bathrooms` float DEFAULT NULL,   `fireplaces` tinyint(3) unsigned DEFAULT NULL,   `assessed_value` int(10) unsigned DEFAULT NULL,   `land_value` int(10) unsigned DEFAULT NULL,   `structure_value` int(10) unsigned DEFAULT NULL,   `year_built` smallint(5) unsigned DEFAULT NULL,   `absentee_owner` tinyint(1) DEFAULT NULL,   `generates_power` tinyint(1) DEFAULT NULL,   `last_sale_value` int(10) unsigned DEFAULT NULL,   `ac_type` enum('CENTRAL','NONE','UNIT','WINDOW','UNKNOWN_TYPE','INFERRED_NONE','FAN','CENTRAL_EVAPORATIVE','CENTRAL_HEAT_PUMP','ROOM_HEAT_PUMP','ROOM_PORTABLE','OTHER','CENTRAL_UNKNOWN') DEFAULT NULL,   `ac_age` enum('LESS_THAN_TEN_YEARS','MORE_THAN_TEN_YEARS') DEFAULT NULL,   `dwelling_condition` enum('ABOVE_AVERAGE','AVERAGE','BELOW_AVERAGE','NONE','OTHER','UNDER_CONSTRUCTION') DEFAULT NULL,   `construction_material` enum('MASONRY','NONE','OTHER','WOOD') DEFAULT NULL,   `basement_type` enum('FINISHED','NONE','OTHER','PARKING','PARTIALLY_FINISHED','UNFINISHED') DEFAULT NULL,   `foundation_type` enum('EARTH','MASONRY','NONE','OTHER','SLAB','WOOD') DEFAULT NULL,   `garage` tinyint(3) unsigned DEFAULT NULL,   `number_of_floors` tinyint(3) unsigned DEFAULT NULL,   `dwelling_quality` enum('AVERAGE','BELOW_AVERAGE','ECONOMICAL','EXCELLENT','FAIR','GOOD','LOW','LUXURY','NONE','OTHER','POOR') DEFAULT NULL,   `heat_type` enum('ELEC','GAS','NONE','OTHER','LPG','OIL','WOOD','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `dwelling_type` enum('MULT','NON_RESIDENTIAL','SING') NOT NULL DEFAULT 'SING',   `pool` enum('NONE','POOL') DEFAULT NULL,   `pool_sqft` mediumint(8) unsigned DEFAULT NULL COMMENT 'The size of the swimming pool in square feet',   `pool_heat_type` enum('ELEC','GAS','SOLAR','OTHER','NONE','LPG','OIL') DEFAULT NULL,   `spa` enum('NONE','SPA','SAUNA') DEFAULT NULL,   `water_heat_type` enum('ELEC','GAS','SOLAR','OTHER','LPG','OIL','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `heat_mech` enum('BASEBOARD','CENTRAL','FORCED_AIR','FURNACE','HEAT_PUMP','NONE','OTHER','RADIATOR','STORAGE','PORTABLE','RADIANT','WOOD_BURNER','ROOM_HEAT_PUMP') DEFAULT NULL,   `heat_age` enum('LESS_THAN_TWENTY_YEARS','MORE_THAN_TWENTY_YEARS') DEFAULT NULL,   `voltage_class` enum('PRIMARY','SECONDARY','TRANSMISSION') DEFAULT NULL,   `elec_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `gas_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `amperage` float DEFAULT NULL COMMENT 'Amperage rating for a site, the unit is ampere (A)',   `user_id` int(10) unsigned DEFAULT NULL,   `source` enum('WEB','CSR','PE','API','INFERRED','SERVICE') DEFAULT NULL COMMENT 'The actor that last made a change to this row',   `changed_on` datetime DEFAULT NULL,   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,   PRIMARY KEY (`site_id`),   KEY `site_parcel_user_fk` (`user_id`),   KEY `site_parcel_updated_at_ix` (`updated_at`),   CONSTRAINT `site_parcel_site_fk` FOREIGN KEY (`site_id`) REFERENCES `site` (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+SELECT
+    constraint_name,
+    table_name
+FROM
+    information_schema.table_constraints
+WHERE
+    constraint_type = 'FOREIGN KEY'
+AND table_schema = DATABASE()
+ORDER BY
+    constraint_name;
+SELECT     constraint_name,     table_name FROM     information_schema.table_constraints WHERE     constraint_type = 'FOREIGN KEY' AND table_schema = DATABASE() ORDER BY     constraint_name;
+SELECT     constraint_name,     table_name FROM     information_schema.table_constraints WHERE     constraint_type = 'FOREIGN KEY' AND table_schema = DATABASE() and table_name like 'site_parcel' ORDER BY     constraint_name;
+SELECT     constraint_name,     table_name FROM     information_schema.table_constraints WHERE     constraint_type = 'FOREIGN KEY' AND table_schema = DATABASE() and table_name like 'site' ORDER BY     constraint_name;
+SET FOREIGN_KEY_CHECKS = 0;
+CREATE TABLE `site_parcel` (   `site_id` int(10) unsigned NOT NULL,   `parcel_unique_id` varchar(40) DEFAULT NULL,   `owner_name` varchar(250) DEFAULT NULL,   `parcel_sqft` mediumint(8) unsigned DEFAULT NULL,   `living_sqft` mediumint(8) unsigned DEFAULT NULL,   `garage_sqft` mediumint(8) unsigned DEFAULT NULL,   `basement_sqft` mediumint(8) unsigned DEFAULT NULL,   `number_of_rooms` smallint(5) unsigned DEFAULT NULL,   `bedrooms` tinyint(3) unsigned DEFAULT NULL,   `bathrooms` float DEFAULT NULL,   `fireplaces` tinyint(3) unsigned DEFAULT NULL,   `assessed_value` int(10) unsigned DEFAULT NULL,   `land_value` int(10) unsigned DEFAULT NULL,   `structure_value` int(10) unsigned DEFAULT NULL,   `year_built` smallint(5) unsigned DEFAULT NULL,   `absentee_owner` tinyint(1) DEFAULT NULL,   `generates_power` tinyint(1) DEFAULT NULL,   `last_sale_value` int(10) unsigned DEFAULT NULL,   `ac_type` enum('CENTRAL','NONE','UNIT','WINDOW','UNKNOWN_TYPE','INFERRED_NONE','FAN','CENTRAL_EVAPORATIVE','CENTRAL_HEAT_PUMP','ROOM_HEAT_PUMP','ROOM_PORTABLE','OTHER','CENTRAL_UNKNOWN') DEFAULT NULL,   `ac_age` enum('LESS_THAN_TEN_YEARS','MORE_THAN_TEN_YEARS') DEFAULT NULL,   `dwelling_condition` enum('ABOVE_AVERAGE','AVERAGE','BELOW_AVERAGE','NONE','OTHER','UNDER_CONSTRUCTION') DEFAULT NULL,   `construction_material` enum('MASONRY','NONE','OTHER','WOOD') DEFAULT NULL,   `basement_type` enum('FINISHED','NONE','OTHER','PARKING','PARTIALLY_FINISHED','UNFINISHED') DEFAULT NULL,   `foundation_type` enum('EARTH','MASONRY','NONE','OTHER','SLAB','WOOD') DEFAULT NULL,   `garage` tinyint(3) unsigned DEFAULT NULL,   `number_of_floors` tinyint(3) unsigned DEFAULT NULL,   `dwelling_quality` enum('AVERAGE','BELOW_AVERAGE','ECONOMICAL','EXCELLENT','FAIR','GOOD','LOW','LUXURY','NONE','OTHER','POOR') DEFAULT NULL,   `heat_type` enum('ELEC','GAS','NONE','OTHER','LPG','OIL','WOOD','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `dwelling_type` enum('MULT','NON_RESIDENTIAL','SING') NOT NULL DEFAULT 'SING',   `pool` enum('NONE','POOL') DEFAULT NULL,   `pool_sqft` mediumint(8) unsigned DEFAULT NULL COMMENT 'The size of the swimming pool in square feet',   `pool_heat_type` enum('ELEC','GAS','SOLAR','OTHER','NONE','LPG','OIL') DEFAULT NULL,   `spa` enum('NONE','SPA','SAUNA') DEFAULT NULL,   `water_heat_type` enum('ELEC','GAS','SOLAR','OTHER','LPG','OIL','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `heat_mech` enum('BASEBOARD','CENTRAL','FORCED_AIR','FURNACE','HEAT_PUMP','NONE','OTHER','RADIATOR','STORAGE','PORTABLE','RADIANT','WOOD_BURNER','ROOM_HEAT_PUMP') DEFAULT NULL,   `heat_age` enum('LESS_THAN_TWENTY_YEARS','MORE_THAN_TWENTY_YEARS') DEFAULT NULL,   `voltage_class` enum('PRIMARY','SECONDARY','TRANSMISSION') DEFAULT NULL,   `elec_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `gas_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `amperage` float DEFAULT NULL COMMENT 'Amperage rating for a site, the unit is ampere (A)',   `user_id` int(10) unsigned DEFAULT NULL,   `source` enum('WEB','CSR','PE','API','INFERRED','SERVICE') DEFAULT NULL COMMENT 'The actor that last made a change to this row',   `changed_on` datetime DEFAULT NULL,   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,   PRIMARY KEY (`site_id`),   KEY `site_parcel_user_fk` (`user_id`),   KEY `site_parcel_updated_at_ix` (`updated_at`),   CONSTRAINT `site_parcel_site_fk` FOREIGN KEY (`site_id`) REFERENCES `site` (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+SET FOREIGN_KEY_CHECKS = 1;
+alter table site_parcel_zok1_backup drop constraint site_parcel_site_fk;
+alter table site_parcel_zok1_backup drop foreign key site_parcel_site_fk;
+CREATE TABLE `site_parcel` (   `site_id` int(10) unsigned NOT NULL,   `parcel_unique_id` varchar(40) DEFAULT NULL,   `owner_name` varchar(250) DEFAULT NULL,   `parcel_sqft` mediumint(8) unsigned DEFAULT NULL,   `living_sqft` mediumint(8) unsigned DEFAULT NULL,   `garage_sqft` mediumint(8) unsigned DEFAULT NULL,   `basement_sqft` mediumint(8) unsigned DEFAULT NULL,   `number_of_rooms` smallint(5) unsigned DEFAULT NULL,   `bedrooms` tinyint(3) unsigned DEFAULT NULL,   `bathrooms` float DEFAULT NULL,   `fireplaces` tinyint(3) unsigned DEFAULT NULL,   `assessed_value` int(10) unsigned DEFAULT NULL,   `land_value` int(10) unsigned DEFAULT NULL,   `structure_value` int(10) unsigned DEFAULT NULL,   `year_built` smallint(5) unsigned DEFAULT NULL,   `absentee_owner` tinyint(1) DEFAULT NULL,   `generates_power` tinyint(1) DEFAULT NULL,   `last_sale_value` int(10) unsigned DEFAULT NULL,   `ac_type` enum('CENTRAL','NONE','UNIT','WINDOW','UNKNOWN_TYPE','INFERRED_NONE','FAN','CENTRAL_EVAPORATIVE','CENTRAL_HEAT_PUMP','ROOM_HEAT_PUMP','ROOM_PORTABLE','OTHER','CENTRAL_UNKNOWN') DEFAULT NULL,   `ac_age` enum('LESS_THAN_TEN_YEARS','MORE_THAN_TEN_YEARS') DEFAULT NULL,   `dwelling_condition` enum('ABOVE_AVERAGE','AVERAGE','BELOW_AVERAGE','NONE','OTHER','UNDER_CONSTRUCTION') DEFAULT NULL,   `construction_material` enum('MASONRY','NONE','OTHER','WOOD') DEFAULT NULL,   `basement_type` enum('FINISHED','NONE','OTHER','PARKING','PARTIALLY_FINISHED','UNFINISHED') DEFAULT NULL,   `foundation_type` enum('EARTH','MASONRY','NONE','OTHER','SLAB','WOOD') DEFAULT NULL,   `garage` tinyint(3) unsigned DEFAULT NULL,   `number_of_floors` tinyint(3) unsigned DEFAULT NULL,   `dwelling_quality` enum('AVERAGE','BELOW_AVERAGE','ECONOMICAL','EXCELLENT','FAIR','GOOD','LOW','LUXURY','NONE','OTHER','POOR') DEFAULT NULL,   `heat_type` enum('ELEC','GAS','NONE','OTHER','LPG','OIL','WOOD','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `dwelling_type` enum('MULT','NON_RESIDENTIAL','SING') NOT NULL DEFAULT 'SING',   `pool` enum('NONE','POOL') DEFAULT NULL,   `pool_sqft` mediumint(8) unsigned DEFAULT NULL COMMENT 'The size of the swimming pool in square feet',   `pool_heat_type` enum('ELEC','GAS','SOLAR','OTHER','NONE','LPG','OIL') DEFAULT NULL,   `spa` enum('NONE','SPA','SAUNA') DEFAULT NULL,   `water_heat_type` enum('ELEC','GAS','SOLAR','OTHER','LPG','OIL','DISTRICT_HEATING','GEOTHERMAL') DEFAULT NULL,   `heat_mech` enum('BASEBOARD','CENTRAL','FORCED_AIR','FURNACE','HEAT_PUMP','NONE','OTHER','RADIATOR','STORAGE','PORTABLE','RADIANT','WOOD_BURNER','ROOM_HEAT_PUMP') DEFAULT NULL,   `heat_age` enum('LESS_THAN_TWENTY_YEARS','MORE_THAN_TWENTY_YEARS') DEFAULT NULL,   `voltage_class` enum('PRIMARY','SECONDARY','TRANSMISSION') DEFAULT NULL,   `elec_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `gas_resolution` enum('NONE','MINUTE','QUARTER_HOUR','HALF_HOUR','HOUR','DAY','MONTH','BILLING') DEFAULT NULL,   `amperage` float DEFAULT NULL COMMENT 'Amperage rating for a site, the unit is ampere (A)',   `user_id` int(10) unsigned DEFAULT NULL,   `source` enum('WEB','CSR','PE','API','INFERRED','SERVICE') DEFAULT NULL COMMENT 'The actor that last made a change to this row',   `changed_on` datetime DEFAULT NULL,   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,   PRIMARY KEY (`site_id`),   KEY `site_parcel_user_fk` (`user_id`),   KEY `site_parcel_updated_at_ix` (`updated_at`),   CONSTRAINT `site_parcel_site_fk` FOREIGN KEY (`site_id`) REFERENCES `site` (`id`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+use site_attribute;
+select * from sync_high_watermarks;
+drop table site_parcel;
+use zok1_report;
+drop table site_parcel;
+rename table site_parcel_zok1_backup to site_parcel;
+alter table site_parcel add constraint site_parcel_site_fk foreign key (`site_id`) REFERENCES `site` (`id`);
+select count(*) from entity_attribute;
+truncate table entity_attribute;
+select count(*) from entity_attribute;
+select * from patches;
+use site_attribute_test;
+select * from patches;
+use batch_test;
+select * from patches;
+update patches set patch_in_progress = 'F';
+select count(*) from entity_attribute;
+desc entity_attribute;;
+select count(*) from entity_attribute where utility_code like 'zok1';
+delete from entity_attribute where utility_code like 'zok1';
+show databases;

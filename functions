@@ -1,0 +1,437 @@
+# Simple calculator
+function calc() {
+	local result=""
+	result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')"
+	#                       └─ default (when `--mathlib` is used) is 20
+	#
+	if [[ "$result" == *.* ]]; then
+		# improve the output for decimal numbers
+		printf "$result" |
+		sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
+		    -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
+		    -e 's/0*$//;s/\.$//'   # remove trailing zeros
+	else
+		printf "$result"
+	fi
+	printf "\n"
+}
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$@"
+}
+
+# Change working directory to the top-most Finder window location
+function cdf() { # short for `cdfinder`
+	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
+}
+
+# Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
+function targz() {
+	local tmpFile="${@%/}.tar"
+	tar -cvf "${tmpFile}" --exclude=".DS_Store" "${@}" || return 1
+
+	size=$(
+		stat -f"%z" "${tmpFile}" 2> /dev/null; # OS X `stat`
+		stat -c"%s" "${tmpFile}" 2> /dev/null # GNU `stat`
+	)
+
+	local cmd=""
+	if (( size < 52428800 )) && hash zopfli 2> /dev/null; then
+		# the .tar file is smaller than 50 MB and Zopfli is available; use it
+		cmd="zopfli"
+	else
+		if hash pigz 2> /dev/null; then
+			cmd="pigz"
+		else
+			cmd="gzip"
+		fi
+	fi
+
+	echo "Compressing .tar using \`${cmd}\`…"
+	"${cmd}" -v "${tmpFile}" || return 1
+	[ -f "${tmpFile}" ] && rm "${tmpFile}"
+	echo "${tmpFile}.gz created successfully."
+}
+
+# Determine size of a file or total size of a directory
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh
+	else
+		local arg=-sh
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@"
+	else
+		du $arg .[^.]* *
+	fi
+}
+
+# Use Git’s colored diff when available
+hash git &>/dev/null
+if [ $? -eq 0 ]; then
+	function diff() {
+		git diff --no-index --color-words "$@"
+	}
+fi
+
+# Create a data URL from a file
+function dataurl() {
+	local mimeType=$(file -b --mime-type "$1")
+	if [[ $mimeType == text/* ]]; then
+		mimeType="${mimeType};charset=utf-8"
+	fi
+	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
+}
+
+# Create a git.io short URL
+function gitio() {
+	if [ -z "${1}" -o -z "${2}" ]; then
+		echo "Usage: \`gitio slug url\`"
+		return 1
+	fi
+	curl -i http://git.io/ -F "url=${2}" -F "code=${1}"
+}
+
+# Start an HTTP server from a directory, optionally specifying the port
+function server() {
+	local port="${1:-8000}"
+	sleep 1 && open "http://localhost:${port}/" &
+	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
+	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
+	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+}
+
+# Start a PHP server from a directory, optionally specifying the port
+# (Requires PHP 5.4.0+.)
+function phpserver() {
+	local port="${1:-4000}"
+	local ip=$(ipconfig getifaddr en1)
+	sleep 1 && open "http://${ip}:${port}/" &
+	php -S "${ip}:${port}"
+}
+
+# Compare original and gzipped file size
+function gz() {
+	local origsize=$(wc -c < "$1")
+	local gzipsize=$(gzip -c "$1" | wc -c)
+	local ratio=$(echo "$gzipsize * 100/ $origsize" | bc -l)
+	printf "orig: %d bytes\n" "$origsize"
+	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"
+}
+
+# Syntax-highlight JSON strings or files
+# Usage: `json '{"foo":42}'` or `echo '{"foo":42}' | json`
+function json() {
+	if [ -t 0 ]; then # argument
+		python -mjson.tool <<< "$*" | pygmentize -l javascript
+	else # pipe
+		python -mjson.tool | pygmentize -l javascript
+	fi
+}
+
+# All the dig info
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer
+}
+
+# Escape UTF-8 characters into their 3-byte format
+function escape() {
+	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
+	# print a newline unless we’re piping the output to another program
+	if [ -t 1 ]; then
+		echo # newline
+	fi
+}
+
+# Decode \x{ABCD}-style Unicode escape sequences
+function unidecode() {
+	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
+	# print a newline unless we’re piping the output to another program
+	if [ -t 1 ]; then
+		echo # newline
+	fi
+}
+
+# Get a character’s Unicode code point
+function codepoint() {
+	perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
+	# print a newline unless we’re piping the output to another program
+	if [ -t 1 ]; then
+		echo # newline
+	fi
+}
+
+# Show all the names (CNs and SANs) listed in the SSL certificate
+# for a given domain
+function getcertnames() {
+	if [ -z "${1}" ]; then
+		echo "ERROR: No domain specified."
+		return 1
+	fi
+
+	local domain="${1}"
+	echo "Testing ${domain}…"
+	echo # newline
+
+	local tmp=$(echo -e "GET / HTTP/1.0\nEOT" \
+		| openssl s_client -connect "${domain}:443" 2>&1);
+
+	if [[ "${tmp}" = *"-----BEGIN CERTIFICATE-----"* ]]; then
+		local certText=$(echo "${tmp}" \
+			| openssl x509 -text -certopt "no_header, no_serial, no_version, \
+			no_signame, no_validity, no_issuer, no_pubkey, no_sigdump, no_aux");
+			echo "Common Name:"
+			echo # newline
+			echo "${certText}" | grep "Subject:" | sed -e "s/^.*CN=//";
+			echo # newline
+			echo "Subject Alternative Name(s):"
+			echo # newline
+			echo "${certText}" | grep -A 1 "Subject Alternative Name:" \
+				| sed -e "2s/DNS://g" -e "s/ //g" | tr "," "\n" | tail -n +2
+			return 0
+	else
+		echo "ERROR: Certificate not found.";
+		return 1
+	fi
+}
+
+# Add note to Notes.app (OS X 10.8)
+# Usage: `note 'title' 'body'` or `echo 'body' | note`
+# Title is optional
+function note() {
+	local title
+	local body
+	if [ -t 0 ]; then
+		title="$1"
+		body="$2"
+	else
+		title=$(cat)
+	fi
+	osascript >/dev/null <<EOF
+tell application "Notes"
+	tell account "iCloud"
+		tell folder "Notes"
+			make new note with properties {name:"$title", body:"$title" & "<br><br>" & "$body"}
+		end tell
+	end tell
+end tell
+EOF
+}
+
+# Add reminder to Reminders.app (OS X 10.8)
+# Usage: `remind 'foo'` or `echo 'foo' | remind`
+function remind() {
+	local text
+	if [ -t 0 ]; then
+		text="$1" # argument
+	else
+		text=$(cat) # pipe
+	fi
+	osascript >/dev/null <<EOF
+tell application "Reminders"
+	tell the default list
+		make new reminder with properties {name:"$text"}
+	end tell
+end tell
+EOF
+}
+
+# Manually remove a downloaded app or file from the quarantine
+function unquarantine() {
+	for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
+		xattr -r -d "$attribute" "$@"
+	done
+}
+
+# Install Grunt plugins and add them as `devDependencies` to `package.json`
+# Usage: `gi contrib-watch contrib-uglify zopfli`
+function gi() {
+	local IFS=,
+	eval npm install --save-dev grunt-{"$*"}
+}
+
+# `m` with no arguments opens the current directory in TextMate, otherwise
+# opens the given location
+function m() {
+	if [ $# -eq 0 ]; then
+		mate .
+	else
+		mate "$@"
+	fi
+}
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+	if [ $# -eq 0 ]; then
+		subl .
+	else
+		subl "$@"
+	fi
+}
+
+# `v` with no arguments opens the current directory in Vim, otherwise opens the
+# given location
+function v() {
+	if [ $# -eq 0 ]; then
+		vim .
+	else
+		vim "$@"
+	fi
+}
+
+# `o` with no arguments opens current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .
+	else
+		open "$@"
+	fi
+}
+
+# `np` with an optional argument `patch`/`minor`/`major`/`<version>`
+# defaults to `patch`
+function np() {
+	git pull --rebase && \
+	npm install && \
+	npm test && \
+	npm version ${1:=patch} && \
+	npm publish && \
+	git push origin master && \
+	git push origin master --tags
+}
+
+# `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
+# the `.git` directory, listing directories first. The output gets piped into
+# `less` with options to preserve color and line numbers, unless the output is
+# small enough for one screen.
+function tre() {
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
+}
+
+# Run maven surefire tests in debug mode
+function mctj() {
+	mvn clean test -Dtest=$1 -Dmaven.surefire.debug="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9092"
+}
+
+# Run specific test cases using maven test
+function mt() {
+	mvn test -Dtest=$1
+}
+
+###########################
+#
+# OPOWER-Specific
+#
+###########################
+
+function deploy() {
+	if [[ $# == 1 || $1 == "alpha|production" ]]
+	then
+		local TIER=$1
+		deploy_stop $TIER && sleep 35 && cap $TIER deploy:update && deploy_start $TIER
+	else
+		echo "usage: deploy {tier}
+tier	alpha,production
+		"
+	fi
+}
+
+function deploy_stop() {
+	if [[ $# == 1 || $1 == "alpha|staging|production" ]]
+	then
+		local TIER=$1
+		cap $TIER maintenance:create; cap $TIER deploy:stop
+	else
+		echo "usage: deploy_stop {tier}
+tier	alpha,staging,production
+		"
+	fi
+}
+
+function deploy_start() {
+	if [[ $# == 1 || $1 == "alpha|staging|production" ]]
+	then
+		local TIER=$1
+		cap $TIER deploy:start; sleep 35; cap $TIER maintenance:delete
+	else
+		echo "usage: deploy {tier}
+tier	alpha,staging,production
+		"
+	fi
+}
+
+function supclient() {
+	basedir=$workspace/clients
+	for client in `svn ls $R/main/clients`
+	do
+		clientdir="$basedir/$client"
+		if [ -d "$clientdir" ]; then
+			echo "Updating $clientdir"
+			svn up $clientdir
+		else
+			echo "Checking out $client"
+			svn co $R/main/clients/$client/trunk $clientdir
+		fi
+	done
+}
+
+function iown() {
+	if [[ $# == 1 ]]
+	then
+		sudo chown -R luveen.wadhwani:wheel $1
+	else
+		echo "usage: iown {absolute_path_to_file_or_directory}"
+	fi
+}
+
+function report_db_tunnel() {
+	local LOCAL_PORT=9000
+	local REMOTE_PORT=3306
+
+	if [[ $# == 2 ]]
+	then
+		LOCAL_PORT=$1
+		REMOTE_DB_HOST=$2
+	elif [[ $# == 1 ]]
+	then
+		REMOTE_DB_HOST=$1
+	else
+		echo "usage: report_db_tunnel [local_port] remote_db_host" && return 0
+	fi
+
+	echo "Forwarding my local port ${LOCAL_PORT} to ${REMOTE_DB_HOST} at port ${REMOTE_PORT}..."
+	ssh -AL ${LOCAL_PORT}:localhost:${REMOTE_PORT} ${REMOTE_DB_HOST} sleep 5000 &
+}
+
+function report_db_mysql() {
+	local LOCAL_PORT=9000
+	local REMOTE_DB_HOST=
+	local DB_NAME=
+	local USERNAME=
+	local PASSWORD=
+
+	if [[ $# == 5 ]]
+	then
+		LOCAL_PORT=$1
+	 	REMOTE_DB_HOST=$2
+		DB_NAME=$3
+		USERNAME=$4
+		PASSWORD=$5
+	elif [[ $# == 4 ]]
+	then
+	 	REMOTE_DB_HOST=$1
+		DB_NAME=$2
+		USERNAME=$3
+		PASSWORD=$4
+	else
+		echo "usage: report_db_mysql [local_port] remote_db_host db_name username password" && return 0
+	fi
+	
+	report_db_tunnel $LOCAL_PORT $REMOTE_DB_HOST
+	echo "Connecting MySQL client to ${LOCAL_PORT}. Database ${DB_NAME}, Username ${USERNAME}, Password ${PASSWORD}..."
+	mysql -A -u${USERNAME} -p${PASSWORD} --port=${LOCAL_PORT} --protocol=TCP -D${DB_NAME}
+}
