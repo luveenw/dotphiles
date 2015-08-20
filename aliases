@@ -157,6 +157,7 @@ alias wrk='work'
 alias w='work'
 alias code='cd $workspace'
 alias devdb='dbdv001'
+alias s4cmd='/usr/local/bin/s4cmd.py'
 
 # Shortcuts and aliases
 alias ll='ls -al'

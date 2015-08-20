@@ -332,7 +332,7 @@ function deploy() {
 	if [[ $# == 1 || $1 == "alpha|production" ]]
 	then
 		local TIER=$1
-		deploy_stop $TIER && sleep 35 && cap $TIER deploy:update && deploy_start $TIER
+		cap $TIER deploy:update && deploy_stop $TIER && deploy_start $TIER
 	else
 		echo "usage: deploy {tier}
 tier	alpha,production
@@ -404,7 +404,7 @@ function report_db_tunnel() {
 	fi
 
 	echo "Forwarding my local port ${LOCAL_PORT} to ${REMOTE_DB_HOST} at port ${REMOTE_PORT}..."
-	ssh -AL ${LOCAL_PORT}:localhost:${REMOTE_PORT} ${REMOTE_DB_HOST} sleep 5000 &
+	ssh -o "ServerAliveInterval 30" -AfL  ${LOCAL_PORT}:localhost:${REMOTE_PORT} ${REMOTE_DB_HOST} sleep 30 &
 }
 
 function report_db_mysql() {
@@ -432,6 +432,9 @@ function report_db_mysql() {
 	fi
 	
 	report_db_tunnel $LOCAL_PORT $REMOTE_DB_HOST
+
+	echo "Waiting for tunnel to complete setup on remote machine..."
+	sleep 5
 	echo "Connecting MySQL client to ${LOCAL_PORT}. Database ${DB_NAME}, Username ${USERNAME}, Password ${PASSWORD}..."
 	mysql -A -u${USERNAME} -p${PASSWORD} --port=${LOCAL_PORT} --protocol=TCP -D${DB_NAME}
 }

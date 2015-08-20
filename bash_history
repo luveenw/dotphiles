@@ -26116,3 +26116,1533 @@ mcis -o -e
 echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok1", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
 man time
 bwqa002
+mysql -D batch -u root -A
+mysql -D site_attribute -u root -A
+mysql -D zok1_report -u poseur -pposeur -h report-zok1-qa.va.opower.it -P 3306 -A
+brew install s3cmd
+s3cmd
+time s3cmd get s3://weather-archive-by-date/2015/05/01/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json
+subl /Users/luveen.wadhwani/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json
+time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json
+rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json
+for true; do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json; done
+for 1; do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json; done
+for 1; do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time %e s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time %e s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json | ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time -f %e s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json | ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time -f '%e' s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json | ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time -f '%e' s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time -f %e s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json ; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json | /usr/bin/grep real; done
+for (( ; ; )); do rm -f ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json && time -p s3cmd get s3://weather-archive-by-date/2015/05/15/icao_ESNQ.json ~/Documents/development/5.6/sa-1105_weather_scrape/icao_ESNQ.json; done
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_zok1_e5282833-267c-44f0-8018-8e57f2ee6180.log
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_zok1_186b3f34-a038-4097-8750-75c08783405c.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_2e1cd9d3-955f-4653-bb9b-04913dc19834.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_5e674765-ab94-497c-984e-b7935836b101.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_aa986980-d5f0-4982-ba26-1d9480d91df7.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_6e35ad7c-e50a-4201-bfa2-e9295f811d5c.log
+rmysql
+which rmysql
+whereis rmysql
+alias rmysql
+type rmysql
+type parseArgs
+ mysql -A -uxxx -papaephoofies --host=localhost --port=58045 --protocol=TCP --prompt="mysql@${HOST}:\\d> " "xxx"
+rmysql dbqa001 xxx
+type rmysql
+echo $jdbc_username
+jdbc_username=xxx
+echo $jdbc_username
+jdbc_password=apaephoofies
+echo $jdbc_password 
+rmysql dbqa001 xxx
+ssh -AL 35046:localhost:3306 dbqa001.va.opower.it sleep 5000 &
+ps aux | grep ssh
+kill -9 24035
+ssh -AL 35046:localhost:3306 dbqa001.va.opower.it sleep 5000
+rmysql dbqa001 xxx
+type rmysql
+ssh_tunnel dbqa001 40 3306 dc6
+mysql -A -uxxx -papaephoofies --host=localhost --port=58045 --protocol=TCP --prompt="mysql@${HOST}:\\d> " "xxx"
+rmysql
+rmysql dbqa001 xxx
+man telnet
+telnet dbqa001
+rmysql 
+rmysql dbqa001 xxx
+ssh -AL ${LOCAL_PORT}:localhost:${SSH_TUNNEL_PORT} ${SSH_TUNNEL_HOST} sleep ${SSH_TUNNEL_TIMEOUT} &
+echo $LOCAL_PORT 
+rmysql dbqa001 xxx
+ssh -AL ${LOCAL_PORT}:localhost:${SSH_TUNNEL_PORT} ${SSH_TUNNEL_HOST} sleep ${SSH_TUNNEL_TIMEOUT} &
+rmysql dbqa001 xxx
+ssh -AL ${LOCAL_PORT}:localhost:${SSH_TUNNEL_PORT} ${SSH_TUNNEL_HOST} sleep ${SSH_TUNNEL_TIMEOUT}
+mysql -A -uxxx -papaephoofies --host=localhost --port=30546 --protocol=TCP --prompt="mysql@${HOST}:\\d> " "xxx"
+mysql -A -uxxx -papaephoofies --host=dbqa001.va.opower.it --port=30546 --protocol=TCP --prompt="mysql@${HOST}:\\d> " "xxx"
+mysql -A -uxxx -papaephoofies --host=report-xxx-qa.va.opower.it --port=30546 --protocol=TCP --prompt="mysql@${HOST}:\\d> " "xxx"
+man ssh
+ssh -fAL 58045:dbqa001.va.opower.it:3306 sleep 5000
+rmysql dbqa001 xxx
+ssh -AL 30546:dbqa001.va.opower.it:3306 sleep 5000 &
+ps aux | grep ssh
+kill -9 47287
+kill -9 46758
+kill -9 28718
+kill -9 28517
+ssh -AL 30546:dbqa001.va.opower.it:3306 sleep 5000
+rmysql dbqa001 xxx
+ssh -AL 30546:dbqa001.va.opower.it:3306 sleep 5000
+ssh -AL 30546:localhost:3306 dbqa001.va.opower.it sleep 5000
+ll
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_af941924-d21a-4b00-b630-76ee7b268f58.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_15bdbcaf-8fef-44ad-8e3a-61484b2a0049.log
+ps aux | grep ssh
+w
+ps aux | grep ssh
+jps -lm
+kill -9 71315
+ssh dev-db-service-1002.va.opower.it
+brew install jasypt
+cd entity-attribute-sync-job/
+mcis -o -e
+bwqa002
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok1", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+dbqa001
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok1", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+bwqa002
+whereis decrypt.sh
+which decrypt.sh
+/code/whatisthis-infrastructure/machines/dev/home/build/bin/jasypt/decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+cd /code/whatisthis-infrastructure/machines/dev/home/build/bin/jasypt
+decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+./decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+-
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+cd /code/whatisthis-infrastructure/machines/dev/home/build/bin/jasypt
+./decrypt.sh input="em9rMV9yZXCEQeQoSXlCRY2iV1DZL7O3" password="n2958uxBfJGr"
+./decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+mcis -o -e
+w
+cd entity-attribute-sync-job/
+w
+-
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+rmysql
+type rmysql
+echo $LOCAL_PORT
+type rmysql
+mysql -P 58045
+mysql -P 30546
+mysql -P 30546 -u xxx -papaephoofies -A
+mysql -P 30546 -u xxx -papaephoofies -D xxx_report -A
+mysql -h localhost -P 30546 -u xxx -papaephoofies -D xxx_report -A
+mysql -h dbqa001.va.opower.it -P 30546 -u xxx -papaephoofies -D xxx_report -A
+mysql -P 30546 -u xxx -papaephoofies -D xxx_report -A
+mysql -h localhost -P 30546 -u xxx -papaephoofies -D xxx_report -A
+type rmysql
+mysql -A -uxxx -papaephoofies --host=localhost --port=30546 --protocol=TCP "xxx"
+telnet localhost 30546
+mysql -A -uxxx -papaephoofies --host=localhost --port=30546 --protocol=TCP "xxx"
+mysql -A -ujenkins -pvolTm3ter --host=localhost --port=30546 --protocol=TCP "xxx"
+mysql -A -ujenkins -pvolTm3ter --port=30546 --protocol=TCP "xxx"
+mysql -A -ujenkins -pvolTm3ter --port=30546 --protocol=TCP
+mysql -A -ujenkins -pvolTm3ter --port=30546 --protocol=TCP -Dxxx_report
+mysql -A -uxxx -papaephoofies --port=30546 --protocol=TCP -Dxxx_report
+mysql -A -uxxx_report -papaephoofies --port=30546 --protocol=TCP -Dxxx_report
+subl ~/.functions
+bash_refresh 
+report_db_tunnel 
+report_db_tunnel dbqa001.va.opower.it
+bash_refresh 
+gp
+report_db_tunnel dbqa001.va.opower.it
+ps aux | grep ssh
+kill -9 50293
+kill -9 63605
+ps aux | grep ssh
+bash_refresh && gp
+report_db_mysql 
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+./decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+ew
+w
+mv whatisthis-infrastructure infrastructure
+cd /code/infrastructure/machines/dev/home/build/bin/jasypt
+./decrypt.sh input="lGOo2XTxZyrHMdCCFyg1dny4pwJNYecB" password="n2958uxBfJGr"
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+w
+cd entity-attribute-sync-job/
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+jps -lm
+kill -9 7658
+kill -98 67839
+kill -9 67839
+mysql -u root
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+gds
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+perl
+awk '{s+=$1} END {printf "%.0f", s}' ~/Documents/development/5.6/sa-1094_easj_oome/blob\ read\ sizes.txt 
+mcis -o -e
+rm -f /Users/luveen.wadhwani/.m2/repository/com/opower/attribute-services-common-db/0.0.19-SNAPSHOT/attribute-services-common-db-0.0.19-SNAPSHOT.jar
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+emptytrash 
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+mcis -o -e
+mci -o -e
+git s
+gc -am"Paged queries"
+git push luveen no-refs_oome_debug
+mci -o -e
+mci -o -e -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+mci -o -e -DskipTests=true -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+mci -o -e -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+git s
+gc -am"Code changes complete; some test cases failing due to Spring not playing"
+git push luveen no-refs_oome_debug 
+man mvn
+mvn help
+mvn -h
+mci -o -e -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+mci -e -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+mci -o -e -Dit.test=IntTestPagingSiteAttributeDAO#testSelectByUpdatedAtRange
+gp && w
+mysql -u site_attribute -p RaU1eX2F -D site_attribute -A
+mysql -u site_attribute -pRaU1eX2F -D site_attribute -A
+ssh dev-service-1016.va.opower.it
+mysql -u site_attribute -pRaU1eX2F -D site_attribute -A
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_6041811e-34b1-457c-963e-008924972e76.log
+bash_refresh && gp
+report_db_tunnel 
+report_db_tunnel 9001 dbqa001.va.opower.it
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_a4de20ca-2b13-4427-84e5-041e17798594.log
+bwqa002
+w
+cd entity-attribute-sync-job/
+gds
+gc -am"Config change to run with XXX against qa"
+go master
+go sa-988_cas_writer 
+report_db_tunnel 
+ps aux | grep ssh
+man ssh-agent
+report_db_tunnel 
+report_db_tunnel 9001 dbqa001.va.opower.it
+ps aux | grep ssh
+report_db_mysql 9001 dbqa001.va.opower.it
+report_db_mysql 9001 dbqa001.va.opower.it xxx_report jenkins volTm3ter
+cd /code/batch/bertha/bertha-scheduler/ && mvn -o -e clean activemq:run zookeeper:start jetty:run
+gp && w
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_2c10dcc3-34f8-45a3-9377-433546aa2e8a.log
+jps -lm
+kill -9  32358
+jps -lm
+kill -9 35365
+jps -lm
+kill -9 39694
+jps -lm
+kill -9 40622
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_cf1dd006-7725-42f9-bb6b-c198520601a5.log
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_3afbc45a-770d-4950-93cf-cb18c8b58906.log
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_775252a7-f6e0-49c5-aa74-36c02217a018.log
+jps -lm
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_82534724-65ed-443f-a751-a3c3367b6f55.log
+jps -lm
+kill -9 65485
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_2b5c1f59-d735-4291-9d48-35153887aedf.log
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_35b15de1-ce1a-48d3-9c1a-3efff6f84e45.log
+jps -lm
+kill -9 612
+jps -lm
+kill -9 1755
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_6196484a-624a-4a29-add4-a371a7ee81ee.log
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_e272ad3d-19a5-4efe-b7ec-a73c11626b9c.log
+jps -lm
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_e272ad3d-19a5-4efe-b7ec-a73c11626b9c.log
+subl $_
+mysql
+mysql -D site_attribute_test -A
+mysql -D site_attribute_test -u site_attribute_test -A
+mysql -D site_attribute_test -u root -A
+rm -rf ~/.m2/repository/*
+ll $_
+ll ~/.m2/repository
+gp && w
+cd clients/xxx
+open
+open .
+CLIENT=xxx; pushd /code/clients/${CLIENT} && echo "Building..." && mcis -o -e && echo "Completed build." && echo && echo "Copying jar..." && cp target/client-${CLIENT}-5.7.0-SNAPSHOT.jar /code/data/batch/clients/${CLIENT}/client.jar && popd && echo "Done." && echo
+CLIENT=xxx; pushd /code/clients/${CLIENT} && echo "Building..." && mcis -e && echo "Completed build." && echo && echo "Copying jar..." && cp target/client-${CLIENT}-5.7.0-SNAPSHOT.jar /code/data/batch/clients/${CLIENT}/client.jar && popd && echo "Done." && echo
+cp -rp /Users/luveen.wadhwani/.m2/repository/com/positiveenergyusa/client-xxx/5.7.0-SNAPSHOT/client-xxx-5.7.0-SNAPSHOT.jar /code/data/batch/clients/xxx/client.jar
+man cp
+man mkdir 
+mkdir -p /code/data/batch/clients/${CLIENT}/ && cp -rp target/client-${CLIENT}-5.7.0-SNAPSHOT.jar /code/data/batch/clients/${CLIENT}/client.jar
+git clone --recursive git@github.com:luveenw/dotphiles.git ~/.dotfiles
+git clone --recursive https://github.com/luveenw/dotphiles.git ~/.dotfiles
+cd .dotfiles/
+ll
+..
+subl ~/.bash_profile 
+ls | grep -ef "^."
+ls | grep -f "^."
+ls | egrep -f "^."
+ls -al
+ll
+ll | egrep -f "^."
+ll | grep -ef "^."
+ll | grep -ef "."
+ll | grep -ef '.'
+ls .*
+ls .[^.]*
+find . -iname ">8"
+find . -iname ".*"
+find . -iname ".*" --maxdepth=1
+find . -iname ".*" --depth=1
+find . -iname ".*" --depth 1
+find . -iname ".*" -d 1
+find . -iname ".*" -d 1 | subl
+ls .chef/
+find . -iname ".*" -d 1 -type f | subl
+find . -iname ".*" -d 1 -type f
+find . -iname ".*" -d 1 -type f | subl
+gp
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do echo cp $f ~/.dotfiles/$($f | cut -c2-)
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do echo cp $f ~/.dotfiles/$($f | cut -c2-); done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do echo dotfiles/$($f | cut -c2-); done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do echo dotfiles/`$f | cut -c2-`; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do echo "dotfiles/"$f | cut -c2-; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$($f | cut -c2-); echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$f | cut -c2-; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$f | cut -c2-; echo "nf: $nf"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -c2-`; echo "nf: $nf"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -c2-`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -d. -c1`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -d . -f 1`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -d .`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -f 1 -d .`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -f 0 -d .`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -f 2 -d .`; echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=`$f | cut -c2-`; echo "nf: $($f | cut -c2-)"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$($f | cut -c2-); echo "nf: ${nf}"; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$($f | cut -c2-); echo nf: $nf; echo cp $f .dotfiles/$nf; done
+echo $nf
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$(echo $f | cut -c2-); echo nf: $nf; echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$(echo $f | cut -c2-); echo cp $f .dotfiles/$nf; done
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$(echo $f | cut -c2-); cp $f .dotfiles/$nf; done
+open ~/.dotfiles/
+for f in .account .aliases .anyconnect .bash_history .bash_profile .bash_prompt .bashrc .cask .curlrc .exports .extra .functions .gemrc .git-completion.bash .gitattributes .gitconfig .gitignore .gvimrc .inputrc .irb-history .lesshst .mailcap .mime.types .mysql_history .osx .path .profile .rnd .rvmrc .s3cfg .screenrc .viminfo .vimrc .wgetrc; do nf=$(echo $f | cut -c2-); echo $nf; done
+cd .dotfiles/
+git l
+git s
+gc -am"Initial commit"
+git remote
+git remotes
+git push origin
+dotsync/bin/dotsync -L
+subl dotsync/bin/dotsync
+dotsync/bin/dotsync -L
+ll ~/.bashrc
+git s
+ga *
+gc -am"Actually add dotfiles"
+git push luveen
+git remotes
+git remote add luveen https://github.com/luveenw/dotphiles.git
+git push luveen
+git s
+git l
+git push origin
+bash_refresh &&gp
+report_db_mysql 
+report_db_mysql 9001 dbqa001.va.opower.it xxx_report xxx apaephoofies
+report_db_mysql 9001 dbqa001.va.opower.it xxx_report jenkins volTm3ter
+ps aux | grep ssh
+kill -9 97191
+kill -9 96684
+subl ~/.functions
+type rmysql
+type ssh_tunnel
+git s
+bash_refresh && gp
+report_db_mysql
+report_db_mysql 9001 dbqa001.va.opower.it xxx_report jenkins volTm3ter
+man sleep
+dbqa001
+type ssh_tunnel
+bash_refresh && gp
+report_db_mysql 9001 dbqa001.va.opower.it xxx_report jenkins volTm3ter
+w
+cd weather-service-jobs/
+gpu
+mysql -u root -D batch -A
+w
+cd site-attribute-service/
+mcis -o -e
+mysql -u root -D batch -A
+mcis -o -e
+mysql -u root -D batch -A
+mcis -o -e
+mysql -u root -D batch -A
+mcis -o -e
+mysql -u root -D batch -A
+mcis -o -e
+mci -o -e
+gs
+git s
+go -b sa-1094_fix_oome
+gc -am"Refactor out code into easj"
+git push luveen sa-1094_fix_oome
+go master
+gpu
+go sa-1094_fix_oome
+mci -o -e
+gp && w
+cd clients
+cd xxx
+svn up
+subl pom.xml 
+mysql -h report-zok1-qa.va.opower.it -u zok1 -pMrjteLANwI3x -D zok1_report -A
+ssh report-xxx-qa.va.opower.it
+ps aux | grep ssh
+w
+cd entity-attribute-sync-job/
+gc -am"CR feedback"
+gb -l
+go no-refs_oome_debug
+tailf /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_e2d50231-d66b-4b96-ba10-465e8624cd15.log
+gp && w
+cd entity-sync-job/
+go master
+gpu
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+ss dev-db-service-1002.va.opower.it
+ dev-db-service-1002.va.opower.it
+dbdv001
+dpdv001
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+gp && w
+dpdv001
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+which git
+git
+cd entity-attribute-sync-job/
+git s
+git status
+gp
+bash_refresh && gp
+ll
+git s
+git l
+git --version
+brew
+brew upgrade
+xcode-select --install
+sudo xcode-select --install
+mci -o -e
+mysql_start
+git s
+mci -o -e
+xcode-select -p
+xcode-select --install
+git s
+mci -o -e
+gc -am"Tests pass"
+gb -l -r
+git push luveen sa-1073_int_test:sa-1073_int_test_merge_sa_1094
+git l
+grm
+grim
+git push -f luveen sa-1073_int_test:sa-1073_int_test_merge_sa_1094
+git s
+gc -am"remove todos"
+mci -o -e
+grm
+grim
+git push -f luveen sa-1073_int_test:sa-1073_int_test_merge_sa_1094
+gc --amend
+git push -f luveen sa-1073_int_test:sa-1073_int_test_merge_sa_1094
+java --version
+java 
+java -version
+mysql -u root -D batch_test -A
+gp && w
+gp && w
+mysql -u root
+dpdv001
+ssh qa-jenkins-slave-1012
+emptytrash 
+cd entity-attribute-sync-job/
+git s
+gds
+mci -o -e
+ll target/surefire-reports/com.opower.attribute.batch.site.reader.TestSiteAttributeServiceToReportDBSyncItemReader-output.txt
+subl target/surefire-reports/com.opower.attribute.batch.site.reader.TestSiteAttributeServiceToReportDBSyncItemReader-output.txt
+mci -o -e -Dtest=TestSiteAttributeServiceToReportDBSyncItemReader
+mci -o -e -Dtest=TestSiteAttributeServiceToReportDBSyncItemReader -DskipITs
+subl target/surefire-reports/com.opower.attribute.batch.site.reader.TestSiteAttributeServiceToReportDBSyncItemReader-output.txt
+git s
+go -b sa-1073_int_test_fix_fail
+gc -am"add toString for debugging"
+git push luveen sa-1073_int_test_fix_fail
+go sa-1073_int_test
+git l
+git s
+go sa-1073_int_test_fix_fail 
+gds
+mci -o -e -Dtest=TestSiteAttributeServiceToReportDBSyncItemReader -DskipITs
+subl target/surefire-reports/com.opower.attribute.batch.site.reader.TestSiteAttributeServiceToReportDBSyncItemReader-output.txt
+gc -am"add toString for parcel"
+git push luveen sa-1073_int_test_fix_fail
+adb push /Users/luveen.wadhwani/Downloads/Let\'s\ Play\ Shenmue\ -\ Part\ 1.mp4 /sdcard/Movies/Lets\ Play\ Shenmue\
+adb push /Users/luveen.wadhwani/Downloads/Let\'s\ Play\ Shenmue\ -\ Part\ 1.mp4 /sdcard/Movies/Lets\ Play\ Shenmue
+adb push /Users/luveen.wadhwani/Downloads/Let\'s\ Play\ Shenmue\ -\ Part\ 2.mp4 /sdcard/Movies/Lets\ Play\ Shenmue
+adb push /Users/luveen.wadhwani/Downloads/Let\'s\ Play\ Shenmue\ -\ Part\ 3.mp4 /sdcard/Movies/Lets\ Play\ Shenmue
+git s
+gc -am"Comment out some stuff to verify if tests still pass"
+git push luveen sa-1073_int_test_fix_fail 
+git l
+git reset --hard HEAD^1
+git l
+git s
+mci -o -e
+subl target/failsafe-reports/com.opower.attribute.batch.IntTestAttributeServiceToCoreTranslatorImpl-output.txt 
+mci -o -e
+mysql -D poseur_test -u root -A
+mci -o -e
+gc -am"Some cleanup"
+git push -f luveen sa-1073_int_test_fix_fail 
+git s
+gc -am"does ordering attributes fix this?"
+git push -f luveen sa-1073_int_test_fix_fail
+mci -o -e
+gc -am"Fix checkstyle"
+git push luveen sa-1073_int_test_fix_fail
+git s
+mci -o -e
+gc -am"Does commenting out toString() still work?"
+git push luveen sa-1073_int_test_fix_fail
+git s
+gc -am"Update s-a-s dep version"
+mcis -e
+git push luveen sa-1073_int_test_fix_fail
+git s
+gc -am"Add toString() back for debugging"
+git push luveen sa-1073_int_test_fix_fail
+git s
+gc -am"Order map entries"
+git push luveen sa-1073_int_test_fix_fail
+mcis -o -e
+git push luveen sa-1073_int_test_fix_fail
+gc -am"Fix checkstyle"
+git push luveen sa-1073_int_test_fix_fail
+mci -o -e
+gc -am"comment out toString() again" && git push luveen sa-1073_int_test_fix_fail
+git s
+gc -am"Remove toString()"
+git push luveen sa-1073_int_test_fix_fail
+ s
+git s
+gc -am"Remove luveen todo"
+git push luveen sa-1073_int_test_fix_fail 
+git l
+git reset --hard HEAD^2
+git reset --hard HEAD^1
+git push -f luveen sa-1073_int_test_fix_fail
+git s
+gc -am"Remove todos"
+git push -f luveen sa-1073_int_test_fix_fail
+git s
+gds
+gp && w
+cd entity-attribute-sync-job/
+mysql -u root -D site_attribute_test -A
+zkServer start
+gp && w
+cd "/Users/luveen.wadhwani/Applications/Metro Last Light.app/Contents"
+ll
+ll MacOS/
+ll Resources/
+cat MacOS/run.sh 
+cd /Applications/Steam.app/Contents/MacOS/steam/games/
+ll
+...
+ll .
+chflags nohidden ~/Library
+killall Finder
+gp && w
+gp && w
+dbdv001 
+gp && w
+dbdv001
+gp && w
+dbdv001
+gp && w
+dbdv001
+gp && w
+sed -e 's/,O/,O,small_orange/g;s/,R/,R,small_red' /Users/luveen.wadhwani/Documents/portland\ owner\ renter.csv | subl
+sed -e 's/,O/,O,small_orange/g;s/,R/,R,small_red/g' /Users/luveen.wadhwani/Documents/portland\ owner\ renter.csv | subl
+sed -e 's/,O/,O,small_yellow/g;s/,R/,R,small_red/g' /Users/luveen.wadhwani/Documents/portland\ owner\ renter.csv | subl
+sed -e 's/,O/,O,5/g;s/,R/,R,10/g' /Users/luveen.wadhwani/Documents/portland\ owner\ renter.csv | subl
+cd weather-service
+gpu
+gb -l
+go -b sa-1031_outlier
+gp && w
+dbdv001
+mysql
+mysql -u root -D weather
+mysql -u root -D weather_test
+ssh dev-db-weather-1001.va.opower.it
+mysql
+mysql -u weather_root -D weather -pdBtB4ZHsYQR5nq
+ssh dev-db-weather-1001.va.opower.it
+mysql -u weather_root -D weather -pdBtB4ZHsYQR5nq -h dev-db-weather-1001.va.opower.it
+gp && w
+w
+cd youtube-dl/
+gpu
+cd ~/Movies/
+mkdir Metal\ Gear\ Solid
+cd Metal\ Gear\ Solid/
+youtube-dl --video-format mp4 https://www.youtube.com/view_play_list?p=81FF3036ED6652FF
+youtube-dl https://www.youtube.com/view_play_list?p=81FF3036ED6652FF
+rm -rf *
+youtube-dl -o "%(autonumber)s-%(title)s.%(ext)s" https://www.youtube.com/view_play_list?p=81FF3036ED6652FF
+adb push /Users/luveen.wadhwani/Downloads/Metal\ Gear\ Solid\ #1_\ Tickle\ Codec.webm /sdcard/Videos/Lets\ Play\ Metal\ Gear\ Solid/Metal\ Gear\ Solid\ 1
+adb push /Users/luveen.wadhwani/Downloads/Metal\ Gear\ Solid\ #2_\ Sneak\ That\ Snake\ Snack.webm /sdcard/Videos/Lets\ Play\ Metal\ Gear\ Solid/Metal\ Gear\ Solid\ 1
+adb push /Users/luveen.wadhwani/Movies/Metal\ Gear\ Solid/00001-Mission\ Description.mp4 /sdcard/Videos/Lets\ Play\ Metal\ Gear\ Solid/Metal\ Gear\ Solid\ 1/Briefing\ Tapes
+adb push /Users/luveen.wadhwani/Movies/Metal\ Gear\ Solid/00001-Mission\ Description.mp4 /sdcard/Movies/Lets\ Play\ Metal\ Gear\ Solid/Metal\ Gear\ Solid\ 1/Briefing\ Tapes
+adb push /Users/luveen.wadhwani/Downloads/Metal\ Gear\ Solid\ #1_\ Tickle\ Codec.webm /sdcard/Movies/Lets\ Play\ Metal\ Gear\ Solid/Metal\ Gear\ Solid\ 1/Metal\ Gear\ Solid\ #1_\ Tickle\ Codec.webm
+adb push /Users/luveen.wadhwani/Movies/Metal\ Gear\ Solid/. /sdcard/Movies/
+adb push /Users/luveen.wadhwani/Movies/Metal\ Gear\ Solid/. /sdcard/Movies/Metal\ Gear\ Solid/
+adb push /Users/luveen.wadhwani/Movies/Metal\ Gear\ Solid/0003\ -\ Metal\ Gear\ Solid\ #3_\ Nice\ Jowls.mp4 /sdcard/Movies/Metal Gear Solid/0003\ -\ Metal\ Gear\ Solid\ #3_\ Nice\ Jowls.mp4
+mysql -u weather_root -D weather -pdBtB4ZHsYQR5nq -h dev-db-weather-1001.va.opower.it
+cd weather-service
+git s
+rm atlassian-ide-plugin.xml bin/performance-test/config/AggregateSeed.csv bin/performance-test/config/DailySummarySeed.csv bin/performance-test/config/ObservationSeed.csv
+git s
+gc -am"Initial changes for outliers"
+git push luveen sa-1031_outlier 
+ll
+ll .git
+ll .git/hooks/pre-push
+subl .git/hooks/pre-push
+cd entity-attribute-sync-job/
+gds
+git l
+gb -l
+gc -am"Add this"
+git push luveen sa-1073_int_test_fix_fail 
+alias g
+alias gp
+grm
+grim
+git push -f luveen sa-1073_int_test_fix_fail 
+gp && w
+gp && w
+type dbqa001
+cd entity-attribute-sync-job/
+go -b no-refs_test_sa_1094
+mcis -o -e
+echo "Posting job request..." && curl "https://bertha-qa.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/xxx/1" && echo && echo "Looked."
+dbqa001
+bwqa001
+bwqa002
+which my.cnf
+whereis my.cnf
+subl ~/.my.cnf
+subl ~/my.cnf
+which mysql
+ll /usr/local/mysql
+ll /usr/local/Cellar/mysql51/5.1.73
+bwqa002
+emptytrash 
+mysql -u root
+gp && w
+cd /code/batch/bertha/bertha-scheduler/ && mvn -o -e clean activemq:run zookeeper:start jetty:run
+gp && w
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok1", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+cd batch/bertha/bertha-agent/
+ll
+..
+ll
+subl pom.xml 
+mcis -o -e
+mcis -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok1", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_29571771-1f1c-42fa-bec6-96917e20db81.log
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_37f72076-92cd-41ae-ae34-4e44905781c5.log
+bwqa002
+cd /code/infrastructure/machines/dev/home/build/bin/jasypt
+./decrypt.sh input="9wjfaAkoX6MKWJ6hOTY26ZRk5N8ESBF5" password="n2958uxBfJGr"
+-
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/3" && echo && echo "Looked."
+w
+cd entity-attribute-sync-job/
+mcis -o -e
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+htop
+top
+jps -lm
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/3" && echo && echo "Looked."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Posting job request..." && curl "https://bertha-qa.va.opower.it:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Posting job request..." && curl "https://bertha-qa.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+mysql -D site_attribute
+mysql -u root -D site_attribute
+du -h
+df -h
+mysql -u root -D site_attribute
+ssh dev-db-service-1002.va.opower.it
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+echo "Posting job request..." && curl "https://bertha-qa.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START", "jobParameters":{}}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-qa.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+mysql -h dev-db-weather-1001.va.opower.it -u weather_root -pdBtB4ZHsYQR5nq -D weather -A
+gp && w
+mysql -u root -D batch -A
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_zok1_3def7167-859f-41e1-a0a2-661c4577e9fd.log
+subl /var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T//logs/bertha-job_entity-attribute-sync-job_xxx_b904a1e7-bde7-458e-a752-e4528f0fadd0.log
+report_db_mysql
+report_db_mysql 9000 dbqa001.va.opower.it xxx_report jenkins volTm3ter
+report_db_mysql 9000 dbqa001.va.opower.it clpp_report jenkins volTm3ter
+youtube-dl --yes-playlist -o '~/Movies/Let's Play Shenmue II/%(playlist)s/%(autonumber)s %(title)s-%(id)s.%(ext)s' https://www.youtube.com/watch?v=H3lKiply9oU&list=PLkxZmcJb0ldxTevbgY6ep4yviKbIogPHb
+youtube-dl --yes-playlist -o "~/Movies/Let's Play Shenmue II/%(playlist)s/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/watch?v=H3lKiply9oU&list=PLkxZmcJb0ldxTevbgY6ep4yviKbIogPHb
+youtube-dl --yes-playlist -o "~/Movies/Let's Play Shenmue II/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/playlist?list=PLkxZmcJb0ldxTevbgY6ep4yviKbIogPHb
+youtube-dl --yes-playlist -o --playlist-start 19 "~/Movies/Let's Play Shenmue/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/playlist?list=PLkxZmcJb0ldwoG01cFT9KG6vs1JIHo_72
+youtube-dl --yes-playlist -o --playlist-start 19 --playlist-end 28 "~/Movies/Let's Play Shenmue/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/playlist?list=PLkxZmcJb0ldwoG01cFT9KG6vs1JIHo_72
+youtube-dl --yes-playlist --playlist-start 19 -o "~/Movies/Let's Play Shenmue/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/playlist?list=PLkxZmcJb0ldwoG01cFT9KG6vs1JIHo_72
+youtube-dl --yes-playlist -o "~/Movies/Let's Dark Souls II - Scholar of the First Sin/%(autonumber)s %(title)s-%(id)s.%(ext)s" https://www.youtube.com/playlist?list=PLekB0zmLBUtQEiJQ8-3MvFx8YQjmZV15W
+bwqa002
+gp && w
+/Applications/MPlayerX.app/Contents/MacOS/MPlayerX; exit;
+gp && w
+cd "/Applications/MPlayerX.app"
+ll
+gp && w
+gp && w
+gp && w
+gp && w
+cd entity-attribute-sync-job/
+git s
+gds
+git s
+git checkout -- src/main/resources/config/local/entityAttributeSyncJob.properties
+ll
+git s
+gds
+git l
+gc -am"[SA-1094] Temporarily enable easj against dev report DB for trsting"
+gc --amend
+git push luveen no-refs_test_sa_1094
+mci -o -e
+git push luveen no-refs_test_sa_1094
+git l
+dpdv001
+cd target/
+ll
+scp entity-attribute-sync-job-0.0.3-SNAPSHOT-with-dependencies.jar luveen.wadhwani@bwdv001:/var/tmp
+bwdv001
+bwdv002
+scp entity-attribute-sync-job-0.0.3-SNAPSHOT-with-dependencies.jar luveen.wadhwani@bwdv002:/var/tmp
+scp entity-attribute-sync-job-0.0.3-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+bwdv002
+dpdv001
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+..
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+dpdv001
+gp && w
+gp && w
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok2", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"zok2", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/zok2/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/xxx/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"xxx", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/xxx/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+cd weather-service
+mci -o -e
+git s
+gds
+gc -am"Review round 1 - visibility modifiers; constant for 10"
+git push luveen sa-1031_outlier 
+git push --no-verify luveen sa-1031_outlier 
+git l
+mci -o -e
+mci -o -e -rf :weather-server
+git l
+gc -am"Review round 1 - throw IllegalArgumentException"
+git push --no-verify luveen sa-1031_outlier 
+git l
+gds
+gc -am"Remove unnecessary checkArgument"
+git push --no-verify sa-1031_outlier
+git push --no-verify luveen sa-1031_outlier
+git l
+gc --amend"Review round 1 - Remove unnecessary checkArgument"
+gc --amend -m"Review round 1 - Remove unnecessary checkArgument"
+git l
+git push --no-verify --force luveen sa-1031_outlier
+git l
+gds
+gc -am"Review round 1 - more documentation"
+git push --no-verify luveen sa-1031_outlier 
+git l
+ssh site-model-service@dev-db-service-1005.va.opower.it
+ssh -V site-model-service@dev-db-service-1005.va.opower.it
+ssh -v site-model-service@dev-db-service-1005.va.opower.it
+mysql --host=dev-db-service-1005.va.opower.it --user=site_model --password=aQZD7El1
+ssh prod-service-1017.va.opower.it
+gds
+gc -am"[WIP] Better outlier filtering"
+git push --no-verify luveen sa-1031_outlier:sa-1031_outlier_tau
+dbdv001
+bwdv002
+gp && w
+cd ~/Dropbox/Documents/1743\ San\ Jose\ Bills/
+cd Trash/
+ll
+mv document.pdf 2015_06_01_trash_bill.pdf
+gp && w
+cd weather-service
+gds
+ll
+ll .git
+subl .git/hooks/pre-push
+gds
+git push luveen sa-1031_outlier sa-1031_outlier
+git push --no-verify luveen sa-1031_outlier
+git l
+gds
+gc -am"More implement"
+git s
+gc -am"Complete unit test case; before running mci"
+mci -o -e
+git s
+gc -am"Fix checkstyle"
+mysql -u root < weather-db/db/schema-local.ddl 
+mci -o -e
+gc -am"Fix tests"
+git push --no-verify luveen sa-1031_outlier
+gdoms
+mci -o -e
+mci -o -e -rf :weather-server
+gc -am"Cleanup"
+git push --no-verify luveen sa-1031_outlier
+git l
+grm
+grim
+git l
+git push -f --no-verify luveen sa-1031_outlier
+-
+w && cd site-service/site-server && cap nexus:upload_artifact
+dbdv001
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -A
+curl -X POST -H "Content-Type: application/json" -d '{"jobName":"entity-attribute-sync-job", "client":"clpp", "cronExpression":"0 0 0 1/1 * ? 2299"}' https://bertha-qa.va.opower.it/v1/scheduler/jobs
+curl -s https://bertha-qa.va.opower.it/v1/scheduler/jobs?jobName=entity-attribute-sync-job\&clientCode=clpp | python -m json.tool
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -e"delete from entity_attribute where utility_code like 'clpp'"
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -e"delete from sync_high_watermarks where utility_code like 'clpp'"
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+gp && w
+bwdv002
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+cd entity-attribute-sync-job/
+gds
+alias gds
+cd ../weather-service
+gds
+git diff luveen sa-1031_outlier
+git diff luveen/sa-1031_outlier
+git diff luveen/sa-1031_outlier | subl
+git l
+gc -am"Complete outlier filtering"
+mci -o -e
+mci -o -e 
+mci -o -e -rf :weather-server
+git diff luveen/sa-1031_outlier | subl
+gc -am"Checkstyle"
+git l
+grm
+grim
+git l
+git push --no-verify luveen sa-1031_outlier
+git l
+gds
+git l
+gc -am"Improved outlier tests"
+git push --no-verify luveen sa-1031_outlier
+mci -o -e
+mci -o -e -rf :weather-server
+grm
+grim
+gc -am"Fix checkstyle"
+grm
+grim
+git push --no-verify -f luveen sa-1031_outlier
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" && echo && echo "Looked."
+gds
+gc -am"Improve null handling"
+mci -o -e
+mci -o -e -rf :weather-server
+gc -am"Checkstyle"
+grm\
+grm
+grim
+git push --no-verify luveen sa-1031_outlier
+killall chrome
+ps aux | grep chrom
+gp && w
+gp && w
+dpdv001
+gp && w
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute
+gp && w
+dbdv001
+gp && w
+cd weather-service
+gds
+gc -am"Explain itemsMerged"
+git push --no-verify luveen sa-1031_outlier 
+curl -s https://bertha-qa.va.opower.it/v1/scheduler/jobs?jobName=entity-attribute-sync-job\&clientCode=clpp | python -m json.tool
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" | python -m json.tool && echo && echo "Looked."
+dpdv001
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" | python -m json.tool && echo && echo "Looked."
+gp && w
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute
+gp && w
+cd entity-attribute-sync-job/
+mci -o -e -Dtest=TestAttributeSyncPropertyUtils
+mci -o -e -DskipITs -Dtest=TestAttributeSyncPropertyUtils
+gds
+gc -am"Improve null handling when setting attribute values"
+git l
+gp && w
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -e"delete from entity_attribute where utility_code like 'clpp'"
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute -e"delete from sync_high_watermarks where utility_code like 'clpp'"
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"entity-attribute-sync-job", "client":"clpp", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/entity-attribute-sync-job/clpp/1" | python -m json.tool && echo && echo "Looked."
+gp && w
+gp && w
+dbdv001
+ssh dev-zookeeper-a.va.opower.it
+cd entity-attribute-sync-job
+mci -o -e
+ll target/surefire/
+ll target/surefire-reports/ | grep IntTestAttributeServiceToCoreTranslatorImpl
+ll target/failsafe-reports
+subl target/failsafe-reports/com.opower.attribute.batch.IntTestAttributeServiceToCoreTranslatorImpl-output.txt
+mci -o -e
+mci -o -e -DskipTests -Dtest=IntTestSiteAttributeSync
+git s
+gsa
+gds
+zkServer status
+ll target/
+mvn clean
+ll target/
+ll target/test-classes/
+git s
+gds
+mci -o -e
+git l
+gc -am"Tests for null handling"
+grm
+grim
+git l
+git push luveen no-refs_test_sa_1094
+git config
+git config --list
+git push luveen no-refs_test_sa_1094
+cd target
+scp entity-attribute-sync-job-0.0.3-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+dpdv001
+gp && w
+dpdv001
+subl target/failsafe-reports/com.opower.attribute.batch.IntTestAttributeServiceToCoreTranslatorImpl-output.txt
+cd entity-attribute-sync-job/
+subl target/failsafe-reports/com.opower.attribute.batch.IntTestAttributeServiceToCoreTranslatorImpl-output.txt
+ll target/entity-attribute-sync-job-0.0.3-SNAPSHOT-with-dependencies.jar 
+git s
+gc -am"Remove temp dev config"
+gdoms
+git push luveen no-refs_test_sa_1094
+grm
+grim
+git l
+git push -f luveen no-refs_test_sa_1094
+ssh dev-db-service-1002.va.opower.it
+ssh -Vv dev-db-service-1002.va.opower.it
+ssh -V dev-db-service-1002.va.opower.it
+ssh -v dev-db-service-1002.va.opower.it
+cd ../weather-service
+git l
+grm
+go master
+gpu
+go sa-1031_outlier
+grm
+grim
+git l
+git push --no-verify -f sa-1031_outlier
+git push --no-verify -f luveen sa-1031_outlier
+type deploy
+cd weather-servefr
+cd weather-server
+cap alpha deploy:stop --HOST=dev-service-1009.va.opower.it
+HOSTS=dev-service-1009.va.opower.it cap alpha deploy:stop
+cap alpha --hosts=dev-service-1009.va.opower.it deploy:stop
+cap alpha --host dev-service-1009.va.opower.it deploy:stop
+cap alpha --hosts dev-service-1009.va.opower.it deploy:stop
+cap alpha --host=dev-service-1009.va.opower.it deploy:stop
+cap alpha -host=dev-service-1009.va.opower.it deploy:stop
+cap alpha -hosts dev-service-1009.va.opower.it deploy:stop
+cap alpha --hosts dev-service-1009.va.opower.it deploy:stop
+cap HOSTS=dev-service-1009.va.opower.it deploy
+cap HOSTS=dev-service-1009.va.opower.it deploy:start
+ssh dev-service-1009.va.opower.it
+ssh weather-service@dev-service-1009.va.opower.it
+gp && w
+mysql -h dev-db-service-1002.va.opower.it -u site_attribute -pRaU1eX2F -D site_attribute
+gp && w
+mysql -u jenkins -pvolTm3ter -h dbqa001 -D bgec_report -A
+dbqa001
+gp && w
+mysql -u jenkins -pvolTm3ter -h dbqa001 -D bgec_report -A
+dbqa001
+gp && w
+ssh weather-service@dev-service-1009.va.opower.it
+gp && w
+...
+w
+gp && w
+gp && w
+dbdv001
+dbqa001
+cd weather-service
+git l
+mci -o -e
+cd weather-server
+mci -o e
+mci -o -e
+git s
+gc -am"Add test case for null filtering when filtering outliers"
+grm
+grim
+mci -o -e
+gc -am"Add unit test case for filtering nulls when filtering outliers"
+git push -f --no-verify luveen sa-1031_outlier_moar
+grm
+grim
+git s
+git l
+git push -f --no-verify luveen sa-1031_outlier_moar
+cap nexus:upload_artifact
+HOSTS=dev-service-1009.va.opower.it cap nexus:upload_artifact
+HOSTS=dev-service-1009.va.opower.it cap alpha deploy:stop
+type deploy
+HOSTS=dev-service-1009.va.opower.it cap alpha deploy
+HOSTS=dev-service-1009.va.opower.it cap alpha deploy:start
+time curl -XGET 'http://dev-service-1009.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+HOSTS=dev-service-1010.va.opower.it cap alpha deploy
+HOSTS=dev-service-1010.va.opower.it cap alpha deploy:start
+HOSTS=dev-service-1010.va.opower.it cap alpha deploy:stop
+HOSTS=dev-service-1010.va.opower.it cap alpha deploy
+HOSTS=dev-service-1010.va.opower.it cap alpha deploy:start
+time curl -XGET 'http://dev-service-1010.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1009.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1010.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1009.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1010.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1009.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1010.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+time curl -XGET 'http://dev-service-1009.va.opower.it:8260/aggregates/39.2716601,-76.5927824?start=2014-06-03&end=2014-06-30'
+dbdv001
+dbqa001
+gp && w
+mkdir clients-git
+cd clients-git
+git clone https://github.va.opower.it/clients/bgec.git
+cd bgec
+mci -e
+mcis -e
+mci -e
+mci -DskipTests -DskipITs -e
+mci -DskipTests -DskipITs -Dskip.recreate.schema=true -e
+mci -DskipTests -DskipITs -Dskip.recreate.schema=true -X -e
+mci -DskipTests -DskipITs -Dskip.recreate.schema=true -e
+go -b sa-1031_test_astro_qa_hitting_weather_dev
+git checkout -- pom.xml
+gds
+gc -am"[SA-1031] Temporarily fetch weather data from weather-service in dev"
+git push luveen sa-1031_test_astro_qa_hitting_weather_dev 
+git remotes
+git remote add luveen https://github.va.opower.it/luveen-wadhwani/bgec
+git remotes
+git push luveen sa-1031_test_astro_qa_hitting_weather_dev 
+git remotes
+gp && w
+type dbdv001
+opower.bash/
+ll opower.bash/
+ll opower.bash/bin/
+subl opower.bash/bin/server-aliases.rb 
+subl opower.bash/config/servers.yaml 
+apdv001
+apqa001
+dpqa001
+apqa001
+which distribute.rb
+whereis distribute.rb
+ll
+find . -iname "distribute.rb" -type f
+mysql
+apqa001
+dpdv001
+man readlink
+apqa001
+ssh weather-service@dev-service-1009
+ssh weather-service@dev-service-10101
+ssh weather-service@dev-service-1010
+gp && w
+ssh weather-service@stage-service-5106.aws.opower.it
+gp && w
+ssh weather-service@stage-service-5106.aws.opower.it
+ssh weather-service@stage-service-5206.aws.opower.it
+gp && w
+dbqa001
+gp && w
+-
+ll
+ll config/
+ll
+ll config/
+subl /tmp/performance-test/prod_2015_07_31_08_31_36_before.csv 
+ruby run_jmeter_test.rb -t prod
+ruby run_jmeter_test.rb -t prod -d 15
+ruby run_jmeter_test.rb -t prod
+go master
+git push --no-verify origin master:SA-1031
+ssh weather-service@stage-service-5206.aws.opower.it
+ssh weather-service@prod-service-5102.aws.opower.it
+ssh weather-service@prod-service-5202.aws.opower.it
+ssh weather-service@dev-service-1010.va.opower.it
+ssh weather-service@prod-service-5202.aws.opower.it
+ssh weather-service@prod-service-5102.aws.opower.it
+ssh weather-service@dev-service-1009.aws.opower.it
+ssh weather-service@dev-service-1009.va.opower.it
+ssh weather-service@prod-service-5102.aws.opower.it
+gp && w
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+gp && w
+cd astro/
+gpu
+rvm install ruby-1.9.2-p330
+ssh dev-db-weather-1001.va.opower.it
+mysql -h dev-db-weather-1001.va.opower.it -u weather_root -pdBtB4ZHsYQR5nq -D weather -A
+dbqa001
+w
+cd weather-service
+cd bin/performance-test/
+ruby run_jmeter_test.rb -t prod
+rm config/*.csv
+git s
+ruby run_jmeter_test.rb -t prod
+git s
+ruby run_jmeter_test.rb -t prod
+ruby generate_seed_data.rb 
+ruby run_jmeter_test.rb -h
+ruby run_jmeter_test.rb -t prod
+gds
+..
+cd weather-server
+cap production deploy
+gds
+go master
+go -b no-refs_perf_testing_updates
+gc -am"[NO-REFS] Performance test output improvements"
+git push --no-verify luveen no-refs_perf_testing_updates 
+go master
+gpu
+go -b sa-1031_rollback
+git l
+..
+git push --no-verify luveen master
+git fetch origin
+git fetch origin master
+gb -l
+git remotes
+git fetch opower
+go revert-387-sa-1031_outlier_moar
+git fetch revert-387-sa-1031_outlier_moar
+git fetch opower revert-387-sa-1031_outlier_moar
+go revert-387-sa-1031_outlier_moar
+gb -l
+git fetch
+git checkout revert-387-sa-1031_outlier_moar
+gb -r
+go origin/revert-387-sa-1031_outlier_moar
+git l
+git push --no-verify luveen origin-revert-387-sa-1031_outlier_moar
+go -b origin-revert-387-sa-1031_outlier_moar
+git l
+git push --no-verify luveen origin-revert-387-sa-1031_outlier_moar
+git fetch
+go origin/revert-387-sa-1031_outlier_moar
+go master
+gpu
+go origin/revert-381-sa-1031_outlier
+go -b origin-revert-381-sa-1031_outlier
+git push --no-verify luveen origin-revert-381-sa-1031_outlier
+go master
+git push --no-verify -f luveen master
+gpu
+go SA-1031
+git fetch
+git fetch opower
+gb -l
+gb -r
+go origin/SA-1031
+go master
+go -t origin/SA-1031
+git l
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+cd bin/performance-test/
+mysql -u root
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+mysql
+cd ~/Documents/development/
+cd 5.8/sa-1031/
+for u in $(cat weather_urls.txt); do echo; echo $u; done
+for u in $(cat weather_urls.txt); do echo; echo "Curling $u..."; curl -XGET "$u"; echo; done
+curl -XGET "localhost:8260/aggregates/38.75286,-76.62841?start=2014-09-28&end=2014-10-26&fields=meanTemperature"
+curl -XGET "localhost:8260/aggregates/38.75286,-76.62841?start=2014-08-29&end=2014-09-27&fields=meanTemperature"
+curl -XGET "localhost:8260/aggregates/38.75286,-76.62841?start=2014-07-27&end=2014-08-28&fields=meanTemperature"
+for u in $(cat weather_urls.txt); do echo; echo "Curling $u..."; curl -XGET "$u"; echo; done
+curl -XGET "localhost:8260/aggregates/38.75286,-76.62841?start=2015-05-30&end=2015-06-27&fields=meanTemperature"
+w
+-
+curl -XGET "localhost:8260/aggregates/38.75286,-76.62841?start=2015-05-30&end=2015-06-27&fields=meanTemperature"
+for u in $(cat weather_urls.txt); do echo; echo "Curling $u..."; curl -XGET "$u"; echo; done
+gp && w
+cd weather-service
+git s
+
+go sa-1031_airport_only 
+git stash
+go sa-1031_airport_only
+git stash apply
+git s
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+ssh weather-service@dev-service-1010.va.opower.it
+ssh weather-service@prod-service-5202.aws.opower.it
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+gp && w
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew install caskroom/cask/brew-cask
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew install jq
+which jq
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+s4cmd ls 
+s4cmd ls s3://weather-archive-by-date/
+s4cmd ls s3://weather-archive-by-date/2015/05/
+s4cmd ls s3://weather-archive-by-date/2015/05/08
+s4cmd ls s3://weather-archive-by-date/2015/05/08/icao*
+for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; mkdir -p ~/Documents/development/5.8/sa-1031/$d; do for s in KBWI KDMH KMTN KFME KEDG KNAK KANP KW29 KAPG KCGS KGAI KDMW; do echo "fetching weather data for icao_$s on 2015/05/$d..."; s4cmd get s3://weather-archive-by-date/2015/05/$d/icao_$s.json ~/Documents/development/5.8/sa-1031/$d/; echo "Done."; echo; done; done
+for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do mkdir -p ~/Documents/development/5.8/sa-1031/$d; do for s in KBWI KDMH KMTN KFME KEDG KNAK KANP KW29 KAPG KCGS KGAI KDMW; do echo "fetching weather data for icao_$s on 2015/05/$d..."; s4cmd get s3://weather-archive-by-date/2015/05/$d/icao_$s.json ~/Documents/development/5.8/sa-1031/$d/; echo "Done."; echo; done; done
+for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do mkdir -p ~/Documents/development/5.8/sa-1031/$d; for s in KBWI KDMH KMTN KFME KEDG KNAK KANP KW29 KAPG KCGS KGAI KDMW; do echo "fetching weather data for icao_$s on 2015/05/$d..."; s4cmd get s3://weather-archive-by-date/2015/05/$d/icao_$s.json ~/Documents/development/5.8/sa-1031/$d/; echo "Done."; echo; done; done
+cd ~/Documents/development/5.8/sa-1031/
+ll
+cd 2015-05_weather/
+gp && w
+cd ~/Documents/development/5.8/sa-1031/2015-05_weather/
+for f in $(find . -iname *.json); do echo $f; done
+for f in $(find . -iname *.json); do sed -n -e '/dailysummary/,$p' $f ; done | subl
+for f in $(find . -iname *.json); do echo $f && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && cat $f | python -m json.tool | sed -n -e '/dailysummary/,$p' && echo && echo; done | subl
+for f in $(find . -iname *.json); do grep -n dailysummary && echo $f... && echo; done | subl
+gp && w
+cd ~/Documents/development/5.8/sa-1031/2015-05_weather/
+for f in $(find . -iname *.json); do echo $f; done
+for f in $(find . -iname *.json); do sed -n -e '/dailysummary/,$p' $f ; done | subl
+for f in $(find . -iname *.json); do echo $f && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && cat $f | python -m json.tool | sed -n -e '/dailysummary/,$p' && echo && echo; done | subl
+for f in $(find . -iname *.json); do grep -n dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do cat $f | python -m json.tool | grep -n dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do cat $f | python -m json.tool | grep -qn dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; end; done | subl
+for f in $(find . -iname *.json); do if [ grep -q dailysummary ]; then echo $f; end; done | subl
+for f in $(find . -iname *.json); do if [ grep -q dailysummary ]; then echo $f; fi; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; fi; done | subl
+gp && w
+-
+dbqa001
+dbdv001
+type dbqa001
+mysql -h dbqa001.va.opower.it -u jenkins -pvolTm3ter -D bgec_report -A 
+dbqa001
+dpqa001
+dpdv001
+dbimp001
+history | grep zkCli
+zkCli -server dev-zookeeper-1001.va.opower.it:2181
+ssh weather-service@dev-service-1009.va.opower.it
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+cd ../weather-service-jobs/
+bin/gen_redis_proto.rb weather_transform.queue < /Users/luveen.wadhwani/Documents/development/5.8/sa-1031/transform_may_gap_for_all_airport_stations.txt
+bin/gen_redis_proto.rb weather_transform.queue < /Users/luveen.wadhwani/Documents/development/5.8/sa-1031/airport_station_date_pairs_for_may_2015_gap.txt 
+bin/gen_redis_proto.rb weather_transform.queue < /Users/luveen.wadhwani/Documents/development/5.8/sa-1031/airport_station_date_pairs_for_may_2015_gap.txt | redis-cli -h prod-redis.va.opower.it -p 6385 --pipe
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+cd ~/Documents/development/5.8/sa-1031/
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do echo "{\"station_code\":\"$s\",\"scrape_date\":\"201505$d\",\"expires_at\":0,\"retries\":0,\"failure_reason\":\"manually inserted from filling script\",\"last_batch_id\":null}"; done; done
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do echo "{\"station_code\":\"$s\",\"scrape_date\":\"201505$d\",\"expires_at\":0,\"retries\":0,\"failure_reason\":\"manually inserted from filling script\",\"last_batch_id\":null}"; done; done | subl
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do echo "$s,201505$d"; done; done | subl
+redis-cli -h prod-redis.va.opower.it -p 6385 llen weather_transform.queue
+bwpr001
+bwpr003
+type bwpr001
+ssh prod-bertha-worker-1003.va.opower.it
+gp && w
+mysql
+mysql -u root
+gp && w
+cd ~/Documents/development/5.8/sa-1031/2015-05_weather/
+for f in $(find . -iname *.json); do echo $f; done
+for f in $(find . -iname *.json); do sed -n -e '/dailysummary/,$p' $f ; done | subl
+for f in $(find . -iname *.json); do echo $f && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && sed -n -e '/dailysummary/,$p' $f && echo && echo; done | subl
+for f in $(find . -iname *.json); do echo $f && echo ---------------------------- && echo && cat $f | python -m json.tool | sed -n -e '/dailysummary/,$p' && echo && echo; done | subl
+for f in $(find . -iname *.json); do grep -n dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do cat $f | python -m json.tool | grep -n dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do cat $f | python -m json.tool | grep -qn dailysummary && echo $f... && echo; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; end; done | subl
+for f in $(find . -iname *.json); do if [ grep -q dailysummary ]; then echo $f; end; done | subl
+for f in $(find . -iname *.json); do if [ grep -q dailysummary ]; then echo $f; fi; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary; then echo $f; fi; done | subl
+for f in $(find . -iname *.json); do if grep -q dailysummary $f; then echo $f; fi; done | subl
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+-h prod-redis.va.opower.it -p 6385 llen weather_transform.queue
+redis-cli -h prod-redis.va.opower.it -p 6385 llen weather_transform.queue
+cd weather-service
+git s
+ga weather-db/src/test/resources/sorted_stations.json weather-db/src/test/resources/stations_subset.json
+git s
+mci -o -e
+mci -o -e -rf :weather-server
+git s
+gc -am"Merge data from 3 closest airport stations as a workaround for offline stations"
+git push --no-verify luveen sa-1031_airport_only 
+gc -am"Local.yml"
+grm
+grim
+git l
+git push -f --no-verify luveen sa-1031_airport_only 
+mci -o -e
+gc -am"Extraneous stuff remove"
+grm
+grim
+git l
+git push -f --no-verify luveen sa-1031_airport_only 
+gp && w
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';"
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e 's/\|| //g'
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e 's/\|| //g' | tr \n ,
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e 's/\|| //g' | sed -e 's/\n/,/g'
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e 's/\|| //g' | tr "\\n" ","
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n2, sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | head -n2, sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | tail -n -1 sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | tail -n -1 | sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e \$d | sed -e 's/\|| //g' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed \$d | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed -e \$d | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed -ie '$ d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed -e '$ d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed '$ d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | tail -n +2 | sed -e 's/\|| //g' | sed -e '$d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" |  subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e '1d;$d'  subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e '1d;$d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e '1d' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" | sed -e '1d' > airport_station_date_pairs_for_may_2015_gap.txt
+subl airport_station_date_pairs_for_may_2015_gap.txt 
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select concat(code) from station where code like 'icao%';" > airport_station_date_pairs_for_may_2015_gap.txt
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select code from station where code like 'icao%';" > airport_station_date_pairs_for_may_2015_gap.txt
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select code from station where code like 'icao%';" | sed -e '1d;$d' > airport_station_date_pairs_for_may_2015_gap.txt
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select code from station where code like 'icao%';"
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select code from station where code like 'icao%';" | sed -e '1d' > airport_station_date_pairs_for_may_2015_gap.txt
+cat airport_station_date_pairs_for_may_2015_gap.txt 
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do in mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select count(*) from weather where station = '$s' and day = 201505$d"; done; done
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select count(*) from weather where station = '$s' and day = 201505$d"; done; done
+cd ~/Documents/development/5.8/sa-1031/
+for s in $(cat all_airport_weather_station_codes.txt); do for d in 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30; do mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"select count(*) from weather where station = '$s' and day = 201505$d"; done; done
+for s in $(cat all_airport_weather_station_codes.txt); do echo "'$s',"; done | subl
+a=;for s in $(cat all_airport_weather_station_codes.txt); do a = $a + "'$s',"; done; echo $a | subl
+a=;for s in $(cat all_airport_weather_station_codes.txt); do a=$a+"'$s',"; done; echo $a | subl
+a=;for s in $(cat all_airport_weather_station_codes.txt); do a=$a+"'$s',"; done; echo $a
+cat all_airport_weather_station_codes.txt | sed -e 's/\n/,'
+cat all_airport_weather_station_codes.txt | sed -e 's/\n/,/g'
+echo "$(cat all_airport_weather_station_codes.txt |  | tr "\n" ",")
+chmod +x find_stations_with_existing_data.sh 
+./find_stations_with_existing_data.sh 
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e"show tables;"
+./find_stations_with_existing_data.sh 
+./find_stations_with_existing_data.sh | subl
+grep lat /code/weather-service/weather-db/src/main/resources/stations.json
+grep lat /code/weather-service/weather-db/src/main/resources/stations.json | wc -l
+./find_stations_with_existing_data.sh
+./find_stations_with_existing_data.sh | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select station, day, mean_temperature, mean_humidity from daily_summary where station in ("icao_KDMH") and day in (20150508, 20150509, 20150510, 20150511, 20150512, 20150513, 20150514, 20150515, 20150516, 20150517, 20150518, 20150519, 20150520, 20150521, 20150522, 20150523, 20150524, 20150525, 20150526, 20150527, 20150528, 20150529, 20150530);' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select station, day, mean_temperature, mean_humidity from daily_summary where station in ("icao_KBWI") and day in (20150508, 20150509, 20150510, 20150511, 20150512, 20150513, 20150514, 20150515, 20150516, 20150517, 20150518, 20150519, 20150520, 20150521, 20150522, 20150523, 20150524, 20150525, 20150526, 20150527, 20150528, 20150529, 20150530);' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select * from daily_summary where station in ("icao_KBWI") and day in (20150508, 20150509, 20150510, 20150511, 20150512, 20150513, 20150514, 20150515, 20150516, 20150517, 20150518, 20150519, 20150520, 20150521, 20150522, 20150523, 20150524, 20150525, 20150526, 20150527, 20150528, 20150529, 20150530);' | subl
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select * from weather where station in ("icao_KBWI") and day in (20150508, 20150509, 20150510, 20150511, 20150512, 20150513, 20150514, 20150515, 20150516, 20150517, 20150518, 20150519, 20150520, 20150521, 20150522, 20150523, 20150524, 20150525, 20150526, 20150527, 20150528, 20150529, 20150530);' | subl
+gp && w
+mci -o -e
+cd weather-service/weather-server/
+mci -o -e
+time curl -XGET 'http://localhost:8260/aggregates/38.98,-76.33?start=2015-05-08&end=2015-05-30'
+time curl -XGET 'http://localhost:8260/dailySummaries/39.70967247262094,-76.27767938930188?start=2015-05-01&end=2015-06-05'
+gp && w
+-
+jq 08/icao_KBWI.json 
+cat 08/icao_KBWI.json | jq
+vim /Users/luveen.wadhwani/.s3cfg 
+subl /Users/luveen.wadhwani/.s3cfg 
+w
+cd weather-service-jobs/
+mkdir -p /work/transforms
+sudo mkdir -p /work/transforms
+sudo chown -R luveen.wadhwani:wheel /work/transforms
+cd /work/transforms/
+-
+bin/populate_transform_queue.rb -s 2015-05-08 -e 2015-05-30 -a AKIAJ62ZF2ZTHBUJ5X5Q -k VIU/Sp0jLno7m2ESQXdBQleOs6DdSptydPpVfBhx -b weather-archive-by-date -d /work/transforms
+ll
+gpu
+ll bin/
+mcis -o -e
+mcis -e -rf :weather-data-warehouse-ingest-job
+ll bin
+cd ../weather-service
+cd weather-server
+java -jar target/weather-server-1.0.27-SNAPSHOT.jar server src/main/resources/local.yml 
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar target/weather-server-1.0.27-SNAPSHOT.jar server src/main/resources/local.yml
+gp && w
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select code, count(*) from stations where compressed = 1 group by 1'
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A -e'select code, count(*) from station where compressed = 1 group by 1'
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+emptytrash 
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+-
+..
+git s
+gds
+gc -am"Javadoc for maxStationMergeCount"
+git push --no-verify luveen sa-1031_airport_only 
+git l
+gp && w
+-
+gds
+ssh weather-service@dev-service-1009.va.opower.it
+ssh weather-service@stage-service-5106.aws.opower.it
+ssh weather-service@stage-service-5206.aws.opower.it
+ssh weather-service@stage-service-5106.aws.opower.it
+ssh weather-service@prod-service-5102.aws.opower.it
+ssh weather-service@dev-service-1010.va.opower.it
+ssh weather-service@stage-service-5206.aws.opower.it
+ssh weather-service@prod-service-5202.aws.opower.it
+gp && w
+gp && w
+gp && w
+gp && w
+cd entity-attribute-sync-job/
+df -h
+emptytrash
+df -h
