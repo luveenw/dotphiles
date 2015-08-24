@@ -46,4 +46,4 @@ source $workspace/opower.bash/opower.bash
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Include kiji BentoBox env
-source ~/Downloads/kiji-bento-ebi/bin/kiji-env.sh > /dev/null
+# source ~/Downloads/kiji-bento-ebi/bin/kiji-env.sh > /dev/null
