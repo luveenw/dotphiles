@@ -29,7 +29,7 @@ M2_HOME=/usr/local/Cellar/maven/3.0.5/libexec
 M2=/usr/local/Cellar/maven/3.0.5/libexec/bin
 
 # Ensure Mysql executable is in PATH
-export PATH=~/.rvm/gems/ruby-1.9.2-p320/bin:/usr/local/mysql/bin:/Applications/Xcode.app/Contents/Developer/usr/subversion-1.6/bin:$SAVANA_HOME/bin:/usr/local/bin:/Users/luveen.wadhwani/Downloads/android-sdk-macosx/tools:$PATH
+export PATH=~/.rvm/gems/ruby-1.9.3-p392/bin:/usr/local/mysql/bin:/Applications/Xcode.app/Contents/Developer/usr/subversion-1.6/bin:$SAVANA_HOME/bin:/usr/local/bin:/Users/luveen.wadhwani/Downloads/android-sdk-macosx/tools:$PATH
 #:/Users/luveen.wadhwani/Downloads/apache-jmeter-2.10/bin
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
