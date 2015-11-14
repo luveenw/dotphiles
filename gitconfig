@@ -18,7 +18,7 @@
 	# Branch
 	b = branch
 	# Switch to a branch
-	go = checkout
+	gk = checkout
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
