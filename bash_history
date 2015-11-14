@@ -27698,3 +27698,1379 @@ brew install wineskin-winery
 brew install winery
 gp && w
 emptytrash
+gp && w
+git clone https://github.va.opower.it/paul-coldren/satt.git
+cd satt
+./build.sh 
+echo $PATH
+rvm list
+subl ~/.bash_profile 
+subl ~/.path 
+subl ~/.profile 
+ls -al | grep "\."
+ls -al | grep "^\."
+-
+rspec
+bundle install
+ll ~/.rvm/gems/ruby-1.9.3-p392/bin
+cd ~/.dotfiles/
+git s
+gds
+gc -am"Update rvm version on PATH"
+git push origin master
+-
+bash_refresh && gp
+gp
+./build.sh 
+subl /Users/luveen.wadhwani/.bash_profile
+-
+gc -am"Comment out kiji bento box"
+git push origin master
+-
+./build.sh 
+rvm list
+echo $PATH
+subl build.sh 
+./build.sh 
+  rvm use 1.9.3 --fuzzy
+bundle install
+rvm use 1.9.3 --fuzzy
+echo $?
+mysql --version
+ssh prod-db-service-1006.va.opower.it
+git s
+ssh weather-service@prod-service-5102.aws.opower.it
+gp && w
+mysql -u root
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -u weather_root -pRZYZ0ccn5ZRXJv -D weather -A
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+gp && w
+redis-cli -h kvdv001.va.opower.it -p 6385 hlen weather_scrape.lock
+redis-cli -h kvdv001.va.opower.it -p 6386 hlen weather_scrape.lock
+redis-cli -h kvdv001.va.opower.it -p 6386 hlen weather_scrape.locked
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.locked
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.locked | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.holding | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 hlen weather_scrape.holding
+redis-cli -h kvdv001.va.opower.it -p 6386 hlen weather_scrape.queue
+redis-cli -h kvdv001.va.opower.it -p 6386 llen weather_scrape.queue
+redis-cli -h kvdv001.va.opower.it -p 6386 lrange weather_scrape.queue 0 100 | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 lrange weather_scrape.queue 0 633682 | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 lrange weather_scrape.queue 0 633682
+redis-cli -h kvdv001.va.opower.it -p 6386 lrange weather_scrape.queue 0 633682 | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 hlen weather_scrape.holding
+awk -F":" '{ print $1  }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt 
+awk -F":" '{ print $1":"$2,$3":"$4 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt 
+awk -F":" '{ print $1":"$2,$3":"$4 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr '{'
+awk -F":" '{ print $1":"$2,$3":"$4 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+awk -F":" '{ print $1":"$2","$3":"$4 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+cat /etc/passwd
+awk -F":" '{ print $1":"$2","$3":"$4 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+awk -F"," '{ print $1","$2" }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+awk -F"," '{ print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+awk -F"," '{ print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{' | subl
+awk -F"," 'NR % 2 { print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_main_queue.txt | tr -d '{'
+awk -F"," 'NR % 2 { print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_lock_queue.txt | tr -d '{'
+awk -F"," 'NR % 2 == 0 { print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_lock_queue.txt | tr -d '{'
+awk -F"," 'NR % 2 == 0 { print $1","$2 }' ~/Documents/development/5.11/SA-1150/weather_dev_lock_queue.txt | tr -d '{' | subl
+cd ~/Documents/development/5.11/SA-1150
+comm weather_dev_main_queue_simplified.txt weather_dev_lock_queue_simplified.txt 
+comm -12 weather_dev_main_queue_simplified.txt weather_dev_lock_queue_simplified.txt 
+sort weather_dev_main_queue_simplified.txt | subl
+sort weather_dev_lock_queue_simplified.txt | subl
+comm -12 weather_dev_main_queue_simplified.txt weather_dev_lock_queue_simplified.txt 
+for s in $(grep -e "pws_.*\""); do echo $s; done
+for s in $(grep -e "pws_.*\"" weather_dev_lock_queue_simplified_sorted.txt); do echo $s; done
+for s in $(grep -e "pws_.*\"," weather_dev_lock_queue_simplified_sorted.txt); do echo $s; done
+for s in $(grep -oe "pws_.*\"," weather_dev_lock_queue_simplified_sorted.txt); do echo $s; done
+for s in $(cat weather_dev_main_queue_simplified_sorted.txt); do echo $s; done
+for s in $(cat weather_dev_lock_queue_simplified_sorted.txt); do grep $s weather_dev_main_queue_simplified_sorted.txt; done
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt): do grep $s weather_dev_lock_queue_simplified_sorted.txt; done | subl
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt): do grep $s weather_dev_lock_queue_simplified_sorted.txt; done
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt); do grep $s weather_dev_lock_queue_simplified_sorted.txt; done | subl
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt); do grep $s weather_dev_lock_queue_simplified_sorted.txt; done
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt); do grep $s weather_dev_lock_queue.txt; done
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt); do grep $s weather_dev_main_queue.txt; done
+for s in $(cat weather_dev_lock_queue_items_also_in_main_queue.txt); do grep $s weather_dev_main_queue_items.txt; done
+for s in $(cat weather_dev_main_queue_items_already_in_lock_queue.txt); do grep $s weather_dev_main_queue_items.txt; done
+for s in $(cat weather_dev_station_code_scrape_date_pairs_in_both_main_and_lock_queues.txt); do grep $s weather_dev_main_queue_items.txt; done
+gp && w
+dbdv001
+mysql -h bertha-db-dev.va.opower.it -u jenkins -p pvolTm3ter
+mysql -h bertha-db-dev.va.opower.it -u jenkins -pvolTm3ter
+gp && w
+youtube-dl -h
+youtube-dl -f mp4 -o '~/Videos/Metal Gear Retrospective.mp4'
+youtube-dl -f mp4 -o '~/Videos/Metal Gear Retrospective.mp4' http://www.gametrailers.com/full-episodes/ls24e9/gt-retrospectives-metal-gear-retrospective--the-complete-collection
+youtube-dl -f mp4 -o '~/Videos/Metal Gear Retrospective - %(id)s.mp4' http://www.gametrailers.com/full-episodes/ls24e9/gt-retrospectives-metal-gear-retrospective--the-complete-collection
+mkdir -p ~/Videos/Metal\ Gear\ Solid\ Retrospective; youtube-dl -f mp4 -o '~/Videos/Metal Gear Retrospective - %(playlist_index)s.mp4' http://www.gametrailers.com/full-episodes/ls24e9/gt-retrospectives-metal-gear-retrospective--the-complete-collection
+youtube-dl -f mp4 -o '~/Videos/Metal Gear Retrospective/Metal Gear Retrospective - Part %(playlist_index)s.mp4' http://www.gametrailers.com/full-episodes/ls24e9/gt-retrospectives-metal-gear-retrospective--the-complete-collection
+gp && w
+gp && w
+cd weather-service
+go master
+go -b sa-1148_delete_pws
+go master
+gpu
+go sa-1148_delete_pws 
+grm
+gc -am"[SA-1148] DAO updates to support deleting personal weather station data"
+grm
+grim
+mci -o -e
+gds
+mci -o -e
+gds
+git s
+gds
+gc -am "Implement EvalWeatherDAO method"
+grm
+grim
+git l
+git push luveen sa-1148_delete_pws 
+git push --no-verify luveen sa-1148_delete_pws 
+cd ../weather-service-jobs
+git s
+gc -am"[SA-1148] Delete all personal weather station data - initial implementation, tests pending"
+git l
+git reset HEAD^1
+git s
+git l
+git s
+ga weather-data-trimming-job/src/main/java/com/opower/weather/batch/data/StationDataDeleteCommand.java weather-data-trimming-job/src/main/java/com/opower/weather/batch/data/StationDataDeleteCommand.java
+git s
+ga weather-data-trimming-job/src/main/java/com/opower/weather/batch/data/WeatherDataDeleteService.java
+git s
+go -b sa-1148_pws
+git s
+gc -am"[SA-1148] Delete all personal weather station data - initial implementation, tests pending"
+git l
+gdoms
+git s
+gc -am"Fixer upper"
+grm
+grim
+git push --no-verify luveen sa-1148_pws 
+git remotes
+git remote add luveen https://github.va.opower.it/luveen-wadhwani/weather-service-jobs
+git remotes
+git push --no-verify luveen sa-1148_pws 
+git s
+gds
+git s
+gds
+git s
+mv missing_stations_20150506_20150603.txt ~/Documents/development/5.8/sa-1031
+git s
+gc -am"Use StationCode; update transform and statistics update jobs to skip personal stations"
+git s
+git push luveen sa-1148_pws
+git s
+gc -am"Use constant for pws oldest day to keep"
+git push luveen sa-1148_pws 
+git s
+gds
+gc -am"Station update job counts number of new stations added by type"
+git push luveen sa-1148_pws 
+git s
+gds
+gc -am"Unit test coverage for weather statistics job changes"
+git push luveen sa-1148_pws 
+git s
+gds
+git l
+gc -am"Unit test coverage for weather station update job changes"
+git s
+gds
+gc -am"Unit test coverage for weather data trimming job changes"
+git s
+gds
+gc -am"Unit test coverage for weather data transform job changes"
+mci -o -e
+GIT S
+gds
+mci -o -e -rf :weather-transform-job
+mci -o -e -rf :weather-transform-job -rf :weather-statistics-job
+git s
+gds
+mci -o -e -rf :weather-data-trimming-job
+git s
+gc -am"Fix IntTestWeatherDataTrimmingJob not cleaning up after completing; other test fixes; code cleanup"
+git push luveen sa-1148_pws 
+emptytrash 
+git s
+cd weather-data-trimming-job/
+mci -o -e
+gds
+gc -am"Review round 1 - weather data trimming job updates"
+git push luveen sa-1148_pws 
+git l
+git s
+..
+git s
+-
+mci -o -e -DskipTests -Dit.test=IntTestWeatherDataTrimmingJob
+git s
+gds
+gc -am"Rename some variables in IntTestWeatherDataTrimmingJob for more clarity"
+git push luveen sa-1148_pws 
+killall XtraFinder
+sudo killall XtraFinder
+sudo killall Finder
+gp && w
+cd ~/Music
+cd Bombay\ Velvet/
+find . -iname *.mp3
+find . -iname "*.mp3"
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.lock | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.lock
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.locked
+redis-cli -h kvdv001.va.opower.it -p 6386 hkeys weather_scrape.locked
+bwdv002
+gp && w
+bwdv002
+scp luveen.wadhwani@bwdv002.va.opower.it:/var/poseur/app/bertha-agent/logs/bertha-job_weather-scrape-job_demo_b967517d-98ed-4885-910b-58f6ec24a37c.log .
+subl bertha-job_weather-scrape-job_demo_b967517d-98ed-4885-910b-58f6ec24a37c.log 
+cd weather-service
+-
+cd weather-service-jobs/
+go master
+go -b sa-1150_lock_queue_fail
+mci -o -e
+open /code/weather-service-jobs/weather-scrape-job/target/failsafe-reports
+mci -o -e -rf :weather-scrape-job
+mci -o -e -rf :weather-transform-job
+gc -am"[SA-1150] Update weather scrape job to account for duplicate locked queue items"
+git push luveen sa-1150_lock_queue_fail 
+git s
+gdoms
+git s
+go sa-1148_pws 
+git s
+gds
+gdoms
+git l
+go master
+gpu
+go sa-1148_pws 
+grm
+grim
+git l
+git push -f luveen sa-1148_pws 
+gc --amend
+git l
+git push -f luveen sa-1148_pws 
+ps ax|grep 'coreaudio[a-z]'
+kill -9 1307
+sudo kill -9 1307
+bwdv002
+dpdv001
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.locked | subl
+redis-cli -h kvdv001.va.opower.it -p 6386 hgetall weather_scrape.locked
+cd weather-service-jobs/
+go master
+gpu
+go sa-1150_lock_queue_fail 
+grm
+grim
+git l
+bwdv001
+bwdv003
+bwdv002
+ll weather-data-trimming-job/target/
+for j in weather-data-trimming-job weather-station-update-job weather-transform-job weather-statistics-jobl; do echo pushd ${j}/target; echo scp ${j}-1.0.24-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp/luveen.wadhwani_sa-1148_snapshot_job_jars; done
+for j in weather-data-trimming-job weather-station-update-job weather-transform-job weather-statistics-jobl; do echo pushd ${j}/target; echo scp ${j}-1.0.24-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp/luveen.wadhwani_sa-1148_snapshot_job_jars; echo popd; done
+for j in weather-data-trimming-job weather-station-update-job weather-transform-job weather-statistics-jobl; do pushd ${j}/target; echo "Copying $j jar..." scp ${j}-1.0.24-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp/luveen.wadhwani_sa-1148_snapshot_job_jars; echo "Done.";  popd; done
+for j in weather-data-trimming-job weather-station-update-job weather-transform-job weather-statistics-jobl; do pushd ${j}/target; echo "Copying $j jar..."; scp ${j}-1.0.24-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp/luveen.wadhwani_sa-1148_snapshot_job_jars; echo "Done.";  popd; done
+for j in weather-statistics-job; do pushd ${j}/target; echo "Copying $j jar..."; scp ${j}-1.0.24-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp/luveen.wadhwani_sa-1148_snapshot_job_jars; echo "Done.";  popd; done
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-trimming-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-trimming-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-trimming-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-trimming-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-trimming-job/demo/1" | python -m json.tool && echo && echo "Looked."
+ll
+go master 
+mcis -o -e
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-trimming-job/demo/1" | python -m json.tool && echo && echo "Looked."
+bwdv002
+gp && w
+gp && w
+gp && w
+bwst001
+gp && w
+gem --version
+cd weather-service-jobs/
+go master
+gpu
+go -b sa-1113_jedis_retry
+redis-cli -v
+type deploy_stop
+type deploy
+type deploy_stop
+type deploy_start
+w
+cd satt/
+gpu
+git checkout --
+git s
+git checkout -- build.sh
+gpu
+./build.sh 
+bundle install
+rvm list
+bundle clean install
+bundle clean
+bundle clean --path .
+bundle clean --path=.
+bundle --version
+brew upgrade bundle
+gem update bundler
+bundle install
+less satt.gemspec 
+less Gemfile 
+cd ../weather-service/weather-server/
+less Gemfile
+less Gemfile.lock 
+-
+less Gemfile.lock 
+less Gemfile
+-
+less Gemfile
+cat $_
+-
+less satt.gemspec 
+cat satt.gemspec 
+gem install parser
+bundle install
+./build.sh 
+gpu
+./build.sh 
+bundle exec rake build
+./build.sh 
+echo $RUBY_VERSION
+rvm use $RUBY_VERSION
+echo $?
+bundle install
+echo $?
+dbdv001
+ssh prod-bertha-scheduler-3001.on.opower.it
+dpdv001 
+git clone https://github.va.opower.it/eng-main/bill-summary-import-job.git
+ssh weather-service@prod-service-5102.aws.opower.it
+archtail weather-service prod
+gem install archy
+archy help
+which archy
+whereis archy
+gem archy --info
+gem archy help
+gem archy
+gp && w
+ll
+ll weather-service-jobs
+cp -rp weather-service-jobs/weather-blob-compressor-job .
+mv weather-blob-compressor-job weather-data-ingest-job
+dbdv001
+which gikt
+which git
+sudo git
+sudo git --version
+cd weather-service-jobs/
+git s
+gc -am"[SA-1113] WIP"
+go master
+gpu
+..
+git clone  https://github.va.opower.it/inbound/inbound.git
+cd inbound/
+dbdv001
+mysql -h dev-db-weather-1001.va.opower.it -u weather_root -pdBtB4ZHsYQR5nq -A
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A
+dbdv001
+mysql -h prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com -D weather -u weather_root -pRZYZ0ccn5ZRXJv -A
+gp && w
+cd "/Library/Preferences/SystemConfiguration"
+for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do echo mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration/; for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do echo mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration/; done
+for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do echo mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration/; for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do echo "mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration"; done
+for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do echo mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration; done
+for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration; done
+for f in com.apple.airport.preferences.plist com.apple.wifi.message-tracer.plist NetworkInterfaces.plist preferences.plist; do sudo mv $f ~/Documents/09-22-2015\ Wi-fi\ Config\ Backup\ from\ Library\>Preferences\>SystemConfiguration; done
+gp && w
+ssh dev-service-1007.va.opower.it
+archtail communicated-insight-digest dev
+gem install archtail
+archtail
+archtail communicated-insight-digest dev
+archtail communicated-insight dev
+brew install multitail
+gem install multitaul
+gem install multitail
+archtail communicated-insight dev
+ssh dev-service-1007.va.opower.it
+ssh dev-service-1041.va.opower.it
+ssh pssc-hadoop-worker-1051.va.opower.it
+gp && w
+emptytrash 
+gp && w
+emptytrash 
+gp && w
+MYSQL=mysql\ -u\ weather_root\ -h\ prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com\ -pRZYZ0ccn5ZRXJv\ -D\ weather
+for s in $(${MYSQL} -e'select distinct station from weather' | tail -n +1); do echo $s; done
+MYSQL=mysql\ -u\ weather_root\ -h\ prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com\ -pRZYZ0ccn5ZRXJv\ -D\ weather\ -A\ --skip-column-names
+for s in $(${MYSQL} -e'select distinct station from weather'); do echo $s; done
+gp && w
+man date
+man echo
+gp && w
+MYSQL=mysql\ -u\ weather_root\ -h\ prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com\ -pRZYZ0ccn5ZRXJv\ -D\ weather\ -A\ --skip-column-names
+for s in $(${MYSQL} -e'select distinct station from weather'); do echo $s; done
+MYSQL=mysql\ -u\ weather_root\ -h\ prod-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com\ -pRZYZ0ccn5ZRXJv\ -D\ weather\ -A\ --skip-column-names
+weather_table_stations=$(${MYSQL} -e'select distinct station from weather')
+echo $weather_table_stations
+gp && w
+gp && w
+gp && w
+-
+gp && w
+gp && w
+cd "/Users/luveen.wadhwani/Downloads/Upsource/temp/upsource-analyzer/upsource-tmp/projects/outbound-content/maven-support/snapshot/.idea/maven"
+ll
+gp && w
+jps -lm
+kill -9 7925
+cd weather-service
+cd weather-server
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+cd ../weather-db/
+mysql -u root < db/schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+ps aux | grep mysql
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+gp && w
+jps -lm
+kill -9 7925
+cd weather-service
+cd weather-server
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+cd ../weather-db/
+mysql -u root < db/schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+ps aux | grep mysql
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+gp && w
+cd weather-service-jobs/
+cd weather-data-ingest-job/
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+mysql -u root -D weather -A -e"select * from ingest_retry" --skip-column-names | subl
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+git s
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+git l
+git stash
+git reset --hard HEAD^1
+git stash apply
+mcis -o -e
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+gds
+mcis -o -e
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+git s
+gds
+gc -am"Logging; changes to store failure reason, batch ID, and permanent failure in retry table; save all attempts in retry table"
+git push luveen sa-1164_poc 
+git s
+gds
+mcis -o -e
+..
+mcis -o -e
+-
+gds
+gc -am"Add extra step to populate retry table with high watermark-based station date pairs; Bertha metrics"
+git push luveen sa-1164_poc 
+git l
+git push -f luveen sa-1164_poc 
+git s
+gds
+mcis -o -e
+gc -am"Logging updates"
+git push luveen sa-1164_poc 
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar ~/Documents/development/5.12/sa-1164_poc 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+..
+mcis -o -w
+mcis -o -e
+-
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+git s
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+ll
+gds
+gc -am"DAO optimization; misc logging"
+git push luveen sa-1164_poc 
+mcis -o -e
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+rm -rf /code/data/batch/jobs/weather-data-ingest-job
+cp -rp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+mkdir -p /code/data/batch/jobs/weather-data-ingest-job
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+rm -rf /code/data/batch/jobs/weather-data-ingest-job
+mkdir -p /code/data/batch/jobs/weather-data-ingest-job
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+rm -rf /code/data/batch/jobs/weather-data-ingest-job/*
+gds
+gc -am"use onProcessError instead of onSkipInProcess; miscellaneous updates"
+git push luveen sa-1164_poc
+mcis -o -e
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+gds
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+..
+mcis -o -e && -
+cap nexus:upload_artifact
+cd target/
+scp weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+dpdv001
+..
+mcis -o -e && -
+scp weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+dpdv001
+gp && w
+gp && w
+bwdv002
+gp && w
+history | grep "--skip-column-names"
+gp && w
+history | grep "--skip-column-names"
+history | grep '--skip-column-names'
+gp && w
+cd weather-service-jobs/weather-data-ingest-job/
+git s
+mcis -o -e
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+mcis -o -e && cp target/weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+gds
+gc -am"Metrics; simplify ingest item reader + refactor writer code; remove inefficient ingest retry DAO method to fetch all rows"
+git push luveen sa-1164_poc 
+ll target
+cd /code/weather-service-jobs/weather-data-ingest-job/target
+scp weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+dpdv001
+..
+mcis -o -e
+scp weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+-
+scp weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar bwdv002.va.opower.it:/var/tmp
+dpdv001
+gp && w
+cd batch/bertha/bertha-scheduler/
+mvn -o -e clean activemq:run zookeeper:start jetty:run
+..
+mcis -o -e
+-
+mvn -o -e clean activemq:run zookeeper:start jetty:run
+-
+mcis -o -e
+-
+mvn -o -e clean activemq:run zookeeper:start jetty:run
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting stop job request..." && curl -XPUT "https://bertha-dev.va.opower.it/v1/executions/39f1ed71-b664-464d-a13d-fd3eddb982df" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"state":"STOPPING"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting stop job request..." && curl -XPUT "https://bertha-dev.va.opower.it/v1/executions/39f1ed71-b664-464d-a13d-fd3eddb982df" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"state":"STOPPING"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+dbdv001
+mysql -h bertha-db-dev.va.opower.it -u bertha -pB6qj4Sx2JCv3 -D batch -A
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+mysql -h bertha-db-dev.va.opower.it -u bertha -pB6qj4Sx2JCv3 -D batch -A
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+gp && w
+ps aux | grep java
+kill -9 7489
+kill -9 7182
+mysql -u root -D weather -A --skip-column-names -e"select code, latest_available_date from station" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather" | subl
+mysql -u root -D weather -A --skip-column-names -e"select code, latest_available_date from station" | subl
+mysql -u root -D weather -A --skip-column-names -e"select code  from station" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station from weather" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station from weather" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather group by 1" | subl
+mysql -u root -D weather -A --skip-column-names -e"select code, latest_available_date  from station" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry" | subl
+jps -lm
+kill 25218
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry order by num_failures desc" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry order by station, num_failures desc" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather group by 1" | subl
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather group by 1 order by 2 desc" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry order by station, num_failures desc" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from station" | subl
+mysql -u root -D weather -A -e"select * from station" | subl
+mysql -u root -D weather -A -e"select code, latest_available_date from station where inactive = 0 and latest_available_date is not null" | subl
+mysql -u root -D weather -A -e"select code, latest_available_date from station" | subl
+mysql -u root -D weather -A -e"select code, inactive, latest_available_date from station" | subl
+mysql -u root -D weather -A -e"select * from ingest_retry" | subl
+mysql -u root -D weather -A -e"select code, inactive, latest_available_date from station" | subl
+mysql -u root -D weather -A -e"select station, max(day) as day from weather use index (weather_station_day_ix) group by 1 order by 1" | subl
+mysql -u root -D weather -A -e"select code, inactive, latest_available_date from station" | subl
+mysql -u root -D weather -A -e"select * from ingest_retry" | subl
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+while true; do mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"; sleep 100; done
+while true; do mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"; sleep 1; done
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+while true; do mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"; sleep 1; done
+mysql -u root -D weather -A --skip-column-names -e"select code, latest_available_date from station where inactive = 0 and latest_available_date is not null"
+mysql -u root -D weather -A --skip-column-names -e"select code, latest_available_date from station where inactive = 0 and latest_available_date is not null" | subl
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A --skip-column-names -e"select station, max(day) from weather where station = 'icao_AGAT'" | subl
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where num_failures > 0"
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where num_failures = 1" | subk
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where num_failures = 1" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry limit 10" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_BGUK' and date = 20151009" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_BGUK' and day = 20151009" | subl
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_BGSS' and day = 20151010" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_AYGA' and day = 20151010" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_AYGA' and day = 20151009" | subl
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_OAKS' and day = 20151010" | subl
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false and num_failures > 0"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = true"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+while true; do mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"; done
+while true; do mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"; sleep 1; done
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where num_failures > 0 and is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = true"
+mysql -u root -D weather -A -e"alter table ingest_retry add index is_failed_permanently_ix(is_failed_permanently)"
+mysql -u root -D weather -A -e"alter table ingest_retry add index num_failures_ix(num_failures)"
+mysql -u root -D weather -A --skip-column-names -e"select * from ingest_retry where station = 'icao_LFMZ' and day = 20151011"
+mysql -u root -D weather -A -e"select * from ingest_retry where station = 'icao_LFMZ' and day = 20151011"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = true"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false use index (is_failed_permanently_ix)"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry where is_failed_permanently = false use index is_failed_permanently_ix"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index is_failed_permanently_ix where is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index(is_failed_permanently_ix) where is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index (is_failed_permanently_ix) where is_failed_permanently = true"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures = 0"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index (is_failed_permanently_ix) where is_failed_permanently = false and num_failures > 0"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index (num_failures_ix) where  and num_failures != 0 and is_failed_permanently = false"
+mysql -u root -D weather -A --skip-column-names -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures != 0 and is_failed_permanently = false"
+mysql -u root -D weather -A
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select * from ingest_retry use index(num_failures_ix);" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select * from ingest_retry use index(is_failed_permanently_ix);" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select * from ingest_retry use index(is_failed_permanently_ix) where is_failed_permanently = false;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry use index(is_failed_permanently_ix) where is_failed_permanently = false;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "explain select station, day from ingest_retry use index(is_failed_permanently_ix) where is_failed_permanently = false;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "explain select station, day from ingest_retry use index(is_failed_permanently_ix);" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry use index(is_failed_permanently_ix) where is_failed_permanently = false order by day desc limit 10000 offset 0;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry where is_failed_permanently = false order by day desc limit 10000 offset 0;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry where is_failed_permanently = false order by station, day desc limit 10000 offset 0;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry where is_failed_permanently = false limit 10000 offset 0;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false order by day desc limit 10000 offset 0;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false order by day desc limit 10000, 10000;" | subl
+mysql -u weather_root -h dev-db-weather-1001.va.opower.it -D weather -pdBtB4ZHsYQR5nq -A -e "select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false order by day desc;" | subl
+pushd /code/whatisthis-infrastructure/machines/dev/home/build/bin/jasypt; ./decrypt.sh input="<encrypted_password>" password="r8tqu9C3Mk45"; popd
+pushd /code/whatisthis-infrastructure/machines/dev/home/build/bin/jasypt; ./decrypt.sh input="XhrUi8U4d8KoSLD3OCXPHBQ+HrjeMp+w" password="r8tqu9C3Mk45"; popd
+pushd /code/infrastructure/machines/dev/home/build/bin/jasypt; ./decrypt.sh input="XhrUi8U4d8KoSLD3OCXPHBQ+HrjeMp+w" password="r8tqu9C3Mk45"; popd
+jps -lm | grep Bertha
+kill -9 14989
+cd weather-service-jobs/
+gc -am"Multithreading optimizations; logging levels"
+git push luveen sa-1164_poc 
+git s
+gds
+mysql -u root -D weather -A -e"select station, day, num_failures from ingest_retry group by 1,2" | subl
+git s
+gds
+gc -am"Skippable exceptions for async processors and writers; reduce commit interval back down to 1"
+git push luveen sa-1164_poc 
+gds
+gp && w
+mysql -u root
+use batch;
+mysql -u root
+mysql -u root -A -e"drop database weather"
+mysql --defaults-file="/var/folders/6l/g7_j7kws07qg76x86tdnqlcrjm03lg/T/tmpCMTYyv/extraparams.cnf"  --protocol=tcp --host=localhost --user=root --port=3306 --default-character-set=utf8 --comments --database=weather < "/Users/luveen.wadhwani/dumps/weather_dev_2015-09-30.sql"
+mysql  --protocol=tcp --host=localhost --user=root --port=3306 --default-character-set=utf8 --comments --database=weather < "/Users/luveen.wadhwani/dumps/weather_dev_2015-09-30.sql"
+mysql -u root -D weather -A
+mysql -u root -A -e"drop database weather"
+mysql -u root -D weather -A
+mysql -u root -A -e"drop database weather"
+mysql -u root -D weather -A
+mysql -u root -D batch -A
+bwdv002
+gp && w
+cd report-libs
+gpu
+gp && w
+emptytrash
+gp && w
+cd ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/
+tailf weather-data-ingest-job.log
+subl weather-data-ingest-job.log
+tailf weather-data-ingest-job.log
+tailf -m 100weather-data-ingest-job.log
+tailf -m 100 weather-data-ingest-job.log
+tailf -n 100 weather-data-ingest-job.log
+mysql -u root -D weather -A -e"select count(*) from ingest_retry"
+mysql -u root -D weather -A -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures > 0 amd is_failed_permanently = false"
+mysql -u root -D weather -A -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures > 0 and is_failed_permanently = false"
+mysql -u root -D weather -A -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures = 0"
+mysql -u root -D weather -A -e"select count(*) from ingest_retry use index (day_ix)"
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select count(*) from ingest_retry use index (day_ix)";
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures = 0";
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select count(*) from ingest_retry use index (num_failures_ix) where num_failures > 0 and is_failed_permanently = false";
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select num_failures, count(*) from ingest_retry use index (num_failures_ix) group by 1 order by 1;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"EXPLAIN select station, day from ingest_retry use index(day_ix) where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29';" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"EXPLAIN select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29';" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29';" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 0;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 1000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 10000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 1000000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 3000000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 3000000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false and updated_at < '2015-10-15 15:24:29' order by day desc limit 10000 offset 3100000;" | subl
+jps -lm
+kill -9 31364
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 24069
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -
+jps -lm
+kill -9 32860
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 36065
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 37738
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 38491
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job-c3p0.log 
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false and updated_at < 1444955023039 order by day desc limit 10000;" | subl
+mysql -h dev-db-weather-1001.va.opower.it -D weather -u weather_root -pdBtB4ZHsYQR5nq -A -e"select station, day from ingest_retry use index (day_ix) where is_failed_permanently = false and updated_at < 1444955023039 order by day desc limit 10000;"
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+;5A
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 51081
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 51914
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 54802
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 56057
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 57828
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 59745
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 60292
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 92445
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 93073
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 94791
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 3169
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 11540
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 15885
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 38128
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 39403
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+jps -lm | grep Bertha
+kill -9 43070
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 49664
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.2
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha'
+jps -lm | grep Bertha
+kill -9 68814
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep bert
+jps -lm | grep Bert
+kill -9 74245
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep bert
+jps -lm | grep Bert
+kill -9 75324
+curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}'
+tailf ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log.1
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 21568
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 22164
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 22950
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm 
+kill -9 28349
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm 
+kill -9 34438
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm 
+kill -9 35182
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm 
+kill -9 43802
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 54749
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 62441
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 66472
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 70038
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm
+kill -9 85339
+jps -lm
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 17157
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 35584
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 38637
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 41808
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 44774
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 47086
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 48840
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+subl ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 53506
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 61574
+kill -9 59321
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+jps -lm | grep Bertha
+kill -9 62779
+tail -f -n 100 ~/Documents/development/5.12/sa-1164_poc/weather-data-ingest-job-logs/weather-data-ingest-job.log
+gp && w
+jps -lm
+kill -9 7925
+cd weather-service
+cd weather-server
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+cd ../weather-db/
+mysql -u root < db/schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+ps aux | grep mysql
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+-
+mysql -u root < db/schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+..
+git s
+gds
+gc -am"Add columns to ingest retry table"
+git push luveen sa-1164_poc 
+git push --no-verify luveen sa-1164_poc 
+git l
+git pull
+git pull luveen sa-1164_poc
+gds
+git push --no-verify luveen sa-1164_poc 
+git push -f --no-verify luveen sa-1164_poc 
+git l
+git s
+ga weather-db/db/patches/patch0012_add_high_watermark_column.sql weather-db/db/patches/patch0013_add_retry_table.sql
+git l
+gc -am"Pull from upstream"
+git push luveen sa-1164_poc 
+git push --no-verify luveen sa-1164_poc 
+mcis -o -e
+git s
+mcis -o -e
+gc -am"Use java.util.Objects instead of com.google.common.base.Objects"
+git push luveen --no-verify sa-1164_poc 
+git s
+gds
+git s
+gc -am"Merge ingest retry patches"
+git push --no-verify luveen sa-1164_poc 
+jps -lm
+kill -9 85951
+mcis -o -e
+cd weather-server
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+cd ../weather-db/db/
+mysql -u root < schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+-
+mysql -u root < schema-local.ddl 
+subl schema-local.ddl 
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+git s
+gc -am"Remove extraneous patches"
+..
+mcis -o -e
+-
+java -jar target/weather-server-1.0.35-SNAPSHOT.jar server src/main/resources/local.yml 
+git s
+..
+mcis -o -e
+git s
+gds
+gc -am"Make WeatherStationDatePair#date Integer"
+git push luveen --no-verify sa-1164_poc 
+git s
+gc -am"Roll up retry table patches; Add more verbose preconditions to WeatherStationDatePair"
+mcis -o -e
+git s
+gc -am"Add indexes to retry table"
+git push --no-verify luveen sa-1164_poc 
+cd weather-server
+bundle install
+cap nexus:upload_artifact
+cap alpha deploy
+cap alpha deploy:stop && sleep 10 && cap alpha deploy:start
+..
+mcis -o -e
+-
+cap nexus:upload_artifact
+cap alpha deploy:stop && sleep 10 && cap alpha deploy:start
+gp && w
+cd ~/Documents/development/5.12/sa-1164_poc/
+unzip -d weather-data-ingest-job weather-data-ingest-job-2.0.0-SNAPSHOT-with-dependencies.jar
+subl /Users/luveen.wadhwani/Documents/development/5.12/sa-1164_poc/run_weather_data_ingest_job.sh
+/Users/luveen.wadhwani/Documents/development/5.12/sa-1164_poc/run_weather_data_ingest_job.sh
+jps -lm
+kill 17615
+jps -lm
+kill 18683
+jps -lm
+kill 21795
+jps -lm
+kill 25442
+jps -lm
+kill 25442
+jps -lm
+kill 47723
+jps -lm
+kill 44159
+jps -lm
+kill -9 49542
+ps aux | grep java
+ps aux | grep java | grep BerthaJob
+ps aux |  grep BerthaJob
+for f in $(ls weather-data-ingest-job-logs/*.log.*); echo $f; done
+for f in $(ls weather-data-ingest-job-logs/*.log.*); do echo $f; done
+for f in $(ls weather-data-ingest-job-logs/*.log); do echo $f; done
+for f in $(ls weather-data-ingest-job-logs); do echo $f; done
+for f in $(ls weather-data-ingest-job-logs); do grep "Marking for retry" $f; done
+for f in $(ls weather-data-ingest-job-logs); do grep "Marking for retry" weather-data-ingest-job-logs/$f; done
+jps -lm
+kill -9     public void setMaxNumFailures(int maxNumFailures) {
+        this.maxNumFailures = maxNumFailures;
+    }
+kill -9 53219
+jps -lm
+kill -9 72020
+ps aux | grep java
+jps -lm
+kill -9 7354
+jps -lm | grep Bertha
+kill -9 49781
+jps -lm | grep Bertha
+kill -9 43359
+mysql -u root -D weather -A
+jps -lm | grep Bertha
+kill -9 47816
+emptytrash 
+gp && w
+cd sensu-opower-plugins/
+gds
+ssh dev-db-weather-1001.va.opower.it
+ssh stage-weather-db.cvzupf6bnies.us-east-1.rds.amazonaws.com
+ssh dev-db-weather-1001.va.opower.it
+ssh prod-service-5102.aws.opower.it
+gp && w
+ssh dev-service-1009.va.opower.it
+gp && w
+cd sensu-opower-plugins/
+gds
+gdoms
+git s
+gds
+gc -am"Add DB disk capacities; syntax"
+git push luveen patch-3
+go mastger
+go master
+gpu
+go patch-3
+grm
+grim
+git push -f luveen patch-3 
+gds
+gc -am"Remove extraneous textr"
+gc --amend
+git l
+grm
+grim
+git push -f luveen patch-3
+cd ../weather-service-jobs/
+gds
+gc -am"Resolve todos"
+git push luveen sa-1164_poc 
+git s
+gds
+gc -am"Update POM version and javadoc to use 1.1.0"
+git push luveen sa-1164_poc 
+git s
+-
+git s
+gds
+gc -am"Better check frequency and alert thresholds"
+git push luveen patch-3
+grm
+grim
+git push -f luveen patch-3
+cd ../weather-service-jobs/
+git s
+gc -am"Add job readme"
+git push luveen sa-1164_poc 
+git fetch
+git s
+alias gpu
+git pull luveen sa-1164
+git pull luveen sa-1164_poc 
+git l
+gds
+git s
+gds
+git s
+gc -am"Final self review updates; throw exception instead of directly marking failure on scrape window missed"
+git push luveen sa-1164_poc 
+git s
+gds
+gc -am"Clarify readme statement; use smaller max pool size"
+git push luveen sa-1164_poc 
+cd ../weather-service
+gb -l
+gpu
+go sa-1164_poc
+gdoms
+grm
+git s
+subl weather-db/db/patches/patch0013_add_high_watermark_column.sql
+subl weather-db/db/patches/patch0014_add_retry_table.sql
+rm -- [SA-1164] Add ingest retry table
+DROP TABLE IF EXISTS ingest_retry;
+CREATE TABLE IF NOT EXISTS ingest_retry (
+  station CHAR(20) NOT NULL COMMENT 'The station code for which a data ingest was attempted but failed',
+  day INT(11) UNSIGNED NOT NULL COMMENT 'The day for which a data ingest was attempted for the station. Specified as yyyyMMdd',
+  num_failures INT(1) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'The number of previous ingest attempts that have failed',
+  failure_reason CHAR(40) DEFAULT NULL COMMENT 'The reason the most recent attempt to fetch data for this station/date pair failed',
+  is_failed_permanently BIT(1) DEFAULT FALSE COMMENT 'Whether to consider this station/date pair as permanently failed',
+  last_batch_id CHAR(36) DEFAULT NULL COMMENT 'The batch ID of the last ingest job that updated this row',
+  updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'The last time this row was updated',
+  PRIMARY KEY (station, day),
+rm weather-db/db/patches/patch0014_add_retry_table.sql
+git s
+rm weather-db/db/patches/patch0013_add_high_watermark_column.sql
+git rebase --continue
+git s
+ga weather-db/db/patches/patch0013_add_high_watermark_column.sql
+ga weather-db/db/patches/patch0014_add_retry_table.sql
+git rebase --continue
+git s
+subl weather-db/db/patches/patch0014_add_retry_table.sql
+rm -- [SA-1164] Add ingest retry table
+DROP TABLE IF EXISTS ingest_retry;
+CREATE TABLE IF NOT EXISTS ingest_retry (
+  station CHAR(20) NOT NULL COMMENT 'The station code for which a data ingest was attempted but failed',
+  day INT(11) UNSIGNED NOT NULL COMMENT 'The day for which a data ingest was attempted for the station. Specified as yyyyMMdd',
+  num_failures INT(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The number of previous ingest attempts that have failed',
+  failure_reason CHAR(40) DEFAULT NULL COMMENT 'The reason the most recent attempt to fetch data for this station/date pair failed',
+  is_failed_permanently BIT(1) DEFAULT FALSE COMMENT 'Whether to consider this station/date pair as permanently failed',
+  last_batch_id CHAR(36) DEFAULT NULL COMMENT 'The batch ID of the last ingest job that updated this row',
+rm weather-db/db/patches/patch0014_add_retry_table.sql
+ga weather-db/db/patches/patch0014_add_retry_table.sql
+git rebase --continue
+git s
+subl weather-db/db/patches/patch0014_add_retry_table.sql
+rm -- [SA-1164] Add ingest retry table
+DROP TABLE IF EXISTS ingest_retry;
+CREATE TABLE IF NOT EXISTS ingest_retry (
+  station CHAR(20) NOT NULL COMMENT 'The station code for which a data ingest was attempted but failed',
+  day INT(11) UNSIGNED NOT NULL COMMENT 'The day for which a data ingest was attempted for the station. Specified as yyyyMMdd',

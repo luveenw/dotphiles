@@ -55,3 +55,7 @@ export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$G
 export HAXEPATH=/usr/lib/haxe
 export HAXE_LIBRARY_PATH=/usr/lib/haxe/std
 export NEKOPATH=/usr/lib/neko
+
+# Go
+export GOROOT=/usr/local/Cellar/go/1.4.2
+export GOPATH=/code/go
