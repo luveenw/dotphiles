@@ -16,6 +16,7 @@ alias h="history"
 alias j="jobs"
 alias and="&&"
 alias tailf='tail -f'
+alias restart_bluetooth='udo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist && sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -185,6 +186,6 @@ alias gdoms='git diff origin/master | subl'
 if [ -f ~/.git-completion.bash ]
 then
 	source ~/.git-completion.bash
-	__git_complete go _git_checkout
+	__git_complete gk _git_checkout
 	__git_complete gb __git_branch
 fi

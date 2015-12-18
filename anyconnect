@@ -4,7 +4,7 @@
 <DefaultSecondUser></DefaultSecondUser>
 <ClientCertificateThumbprint>AFECA4B3A2EE8D932754185C9727E23AAB4E24BC</ClientCertificateThumbprint>
 <ServerCertificateThumbprint></ServerCertificateThumbprint>
-<DefaultHostName>US-WEST (1)</DefaultHostName>
+<DefaultHostName>US-WEST (2)</DefaultHostName>
 <DefaultHostAddress></DefaultHostAddress>
 <DefaultGroup>Opower-AD</DefaultGroup>
 <ProxyHost></ProxyHost>

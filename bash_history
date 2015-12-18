@@ -29074,3 +29074,74 @@ DROP TABLE IF EXISTS ingest_retry;
 CREATE TABLE IF NOT EXISTS ingest_retry (
   station CHAR(20) NOT NULL COMMENT 'The station code for which a data ingest was attempted but failed',
   day INT(11) UNSIGNED NOT NULL COMMENT 'The day for which a data ingest was attempted for the station. Specified as yyyyMMdd',
+gp && w
+bash_refresh && gp
+gp && w
+bash_refresh && gp
+gp && w
+bash_refresh && gp
+gp && w
+dodv001
+dpdv001
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+cd weather-service-jobs/weather-data-ingest-job
+mcis -o -e
+cp target/weather-data-ingest-job-1.1.1-SNAPSHOT-with-dependencies.jar /code/data/batch/jobs/weather-data-ingest-job/job.jar 
+echo "Looking for existing job requests..." && curl "http://localhost:8080/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "http://localhost:8080/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "http://localhost:8080/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "http://localhost:8080/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+git s
+go master
+gk master
+gpu
+gk -b sa-1164_update_dao
+git s
+gc -am"[SA-1164] Update DAO methods to use correct date format from WeatherStationDatePair"
+git push luveen sa-1164_update_dao 
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+git s
+gk master
+gpu
+gk -b sa-1164_fix_writer
+gc -am"[SA-1164] Fix data ingest writer to not fail on no observations"
+git push luveen sa-1164_fix_writer 
+..
+mcis -o -e
+mcis -o -e -rf :weather-data-ingest-job
+gk master
+gpu
+gk -b sa-1164_fix_checkstyle
+gc -am"[SA-1164] Fix checkstyle"
+git push luveen sa-1164_fix_checkstyle 
+gk master
+gpu
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+mysql -u root
+bwdv002
+dpdv001
+bwdv002
+dpdv001
+cd /code/batch/bertha/bertha-scheduler/ && mvn -o -e clean activemq:run zookeeper:start jetty:run
+dpdv001
+bwdv002
+dpdv001
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Posting job request..." && curl "https://bertha-dev.va.opower.it/v1/executions" --header "Content-Type: application/json" --header "Accept: application/json" --data '{"jobName":"weather-data-ingest-job", "client":"demo", "action":"START"}' | python -m json.tool && echo && echo "Posted."
+"Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+echo "Looking for existing job requests..." && curl "https://bertha-dev.va.opower.it/v1/executions/weather-data-ingest-job/demo/1" | python -m json.tool && echo && echo "Looked."
+bwdv002
+dpdv001
+gp && bash_refresh
+w
+git s
+cd weather-service-jobs
+git s
