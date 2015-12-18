@@ -16,7 +16,7 @@ alias h="history"
 alias j="jobs"
 alias and="&&"
 alias tailf='tail -f'
-alias restart_bluetooth='udo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist && sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist'
+alias restart_bluetooth='sudo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist && sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
